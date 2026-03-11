@@ -1,0 +1,65 @@
+{
+  "stone-chariot-hampi": {
+    "path": "src/assets/images/stone-chariot-hampi.jpg",
+    "title": "Stone Chariot - Hampi",
+    "credit": "Ankit, via Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stone_Chariot_-_Hampi.jpg"
+  },
+  "vijayanagara-krishnadevaraya": {
+    "path": "src/assets/images/vijayanagara-krishnadevaraya.jpg",
+    "title": "King Krishnadevaraya, Vijayanagara emperor",
+    "credit": "Chavakiran, via Telugu Wikipedia / Wikimedia Commons",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vijayanagara.jpg"
+  },
+  "telugu-manuscript": {
+    "path": "src/assets/images/telugu-manuscript.jpg",
+    "title": "Vedanta Sara manuscript, page 4 recto, Sanskrit, Telugu script",
+    "credit": "Ms Sarah Welch, via Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vedanta_Sara_manuscript,_page_4_recto,_Sanskrit,_Telugu_script.jpg"
+  },
+  "visvesvaraya-portrait": {
+    "path": "src/assets/images/visvesvaraya-portrait.jpg",
+    "title": "Vishveshvarayya in his 30s",
+    "credit": "Unknown author, via Wikimedia Commons",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vishveshvarayya_in_his_30%27s.jpg"
+  },
+  "krs-dam": {
+    "path": "src/assets/images/krs-dam.jpg",
+    "title": "Krishna Raja Sagara dam",
+    "credit": "Vaishu2, via Wikimedia Commons",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Krishna_raja_sagara_dam.JPG"
+  },
+  "tirupati-temple": {
+    "path": "src/assets/images/tirupati-temple.jpg",
+    "title": "Tirumala Venkateswara temple entrance",
+    "credit": "Nikhilb239, via Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tirumala_Venkateswara_temple_entrance_09062015.JPG"
+  },
+  "yadadri-temple": {
+    "path": "src/assets/images/yadadri-temple.jpg",
+    "title": "Sri Lakshminarasimha Swamy Temple, Yadadri",
+    "credit": "Ravindraoudeptling, via Wikimedia Commons",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sri_Lakshminarasimha_Swamy_Temple_Yadagirigutta_Yadadri_Telangana_02.jpg"
+  },
+  "sriharikota-launch": {
+    "path": "src/assets/images/sriharikota-launch.jpg",
+    "title": "Launch from Satish Dhawan Space Centre, Sriharikota",
+    "credit": "Indian Space Research Organisation, via Wikimedia Commons",
+    "license": "GODL-India",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:01_Launch_of_GSLV_Mk_III_D2_with_GSAT-29_from_Second_Launch_Pad_of_Satish_Dhawan_Space_Centre,_Sriharikota_(SDSC_SHAR).jpg"
+  },
+  "vemana-verses": {
+    "path": "src/assets/images/vemana-verses.jpg",
+    "title": "The Verses of Vemana (1911), page preview",
+    "credit": "Charles Philip Brown, via Wikimedia Commons",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Verses_Of_Vemana_(1911).pdf"
+  }
+}

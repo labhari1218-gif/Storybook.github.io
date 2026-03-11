@@ -1,0 +1,25 @@
+id: sriharikota
+slug: sriharikota
+order: 11
+title: Sriharikota
+subtitle: Where the coast opens into the sky
+type: place
+hook: Not every sacred place has bells. Some have countdown clocks.
+takeaway: "Sriharikota carries a modern kind of wonder: disciplined work that ends in flight."
+sourceLabel: "ISRO, Satish Dhawan Space Centre (SDSC SHAR)"
+sourceUrl: https://www.isro.gov.in/SDSC.html
+sourceQuality: reference
+heroImage: sriharikota-launch
+heroImageAlt: Rocket launch from Satish Dhawan Space Centre, Sriharikota
+heroPlacement: opening-only
+imageCredit: Indian Space Research Organisation, via Wikimedia Commons
+imageLicense: GODL-India
+imageSourceUrl: https://commons.wikimedia.org/wiki/File:01_Launch_of_GSLV_Mk_III_D2_with_GSAT-29_from_Second_Launch_Pad_of_Satish_Dhawan_Space_Centre,_Sriharikota_(SDSC_SHAR).jpg
+pages:
+  - heading: India's spaceport on the Andhra coast
+    body: |
+      Sriharikota is home to the Satish Dhawan Space Centre, the launch base that sends Indian rockets into the sky.
+
+      There, solid propellants are processed, vehicles are assembled, systems are tested, and countdowns become flame, sound, and ascent.
+
+      In this little book, Sriharikota stands for a different strand of Telugu-region imagination: not only memory and story, but science, precision, and the future.

@@ -1,0 +1,87 @@
+import { expect, test } from "@playwright/test";
+
+test("book opens on cover and front note before story one", async ({ page }) => {
+  await page.goto("/");
+
+  await expect(page.getByText("A Little Book of Telugu Wonder")).toBeVisible();
+  await expect(page.getByTestId("progress-text")).toHaveText("01 / 21");
+
+  await page.getByTestId("nav-next").click();
+  await expect(page.getByText("Come in. The book begins here.")).toBeVisible();
+
+  await page.getByTestId("nav-next").click();
+  await expect(page.getByText("The court wanted the cleverest cat")).toBeVisible();
+  await expect(page.getByTestId("progress-text")).toHaveText("03 / 21");
+});
+
+test("story opening has one image and later pages are text only", async ({ page }) => {
+  await page.goto("/read/a-strange-cat");
+
+  await expect(page.getByTestId("screen-image")).toBeVisible();
+  await page.getByTestId("nav-next").click();
+  await expect(page.getByText("One bowl of milk changed everything")).toBeVisible();
+  await expect(page.getByTestId("screen-image")).toHaveCount(0);
+
+  await page.getByTestId("nav-next").click();
+  await expect(page.getByText("Raman explained the trick")).toBeVisible();
+  await expect(page.getByTestId("screen-image")).toHaveCount(0);
+});
+
+test("tap and swipe still turn pages, extras still expand, and cover reset works", async ({ page }) => {
+  await page.goto("/");
+
+  const surface = page.getByTestId("book-surface");
+  const box = await surface.boundingBox();
+  if (!box) {
+    throw new Error("Book surface bounding box not found");
+  }
+
+  await page.touchscreen.tap(box.x + box.width - 24, box.y + box.height / 2);
+  await expect(page.getByText("Come in. The book begins here.")).toBeVisible();
+
+  await page.touchscreen.tap(box.x + box.width - 24, box.y + box.height / 2);
+  await expect(page.getByText("The court wanted the cleverest cat")).toBeVisible();
+
+  await page.touchscreen.tap(box.x + 24, box.y + box.height / 2);
+  await expect(page.getByText("Come in. The book begins here.")).toBeVisible();
+
+  await page.goto("/read/tongue-twisters");
+  await page.getByRole("button", { name: /Yerra lorry tella lorry/i }).click();
+  await expect(page.getByText(/Red lorry, white lorry/i)).toBeVisible();
+
+  await page.getByTestId("nav-cover").click();
+  await expect(page.getByText("A Little Book of Telugu Wonder")).toBeVisible();
+});
+
+test("deep links resolve correctly and public credits/report routes are gone", async ({ page }) => {
+  await page.goto("/read/sir-m-visvesvaraya");
+  await expect(page.getByText("Engineer first, legend second")).toBeVisible();
+  await expect(page.getByAltText(/Portrait of Sir M. Visvesvaraya/i)).toBeVisible();
+
+  await page.goto("/read/italian-of-the-east");
+  await expect(page.getByText("Have you ever wondered why Telugu is called the Italian of the East?")).toBeVisible();
+
+  const creditsResponse = await page.goto("/credits");
+  expect(creditsResponse?.status()).toBe(404);
+
+  const reportResponse = await page.goto("/report");
+  expect(reportResponse?.status()).toBe(404);
+});
+
+test("public reading flow contains no visible source links and fits mobile viewport", async ({ page }) => {
+  await page.goto("/read/tirupati");
+  await expect(page.getByText("A place carried by countless footsteps")).toBeVisible();
+  await expect(page.getByText(/Katha Kids|Britannica|Wikimedia|Image source/i)).toHaveCount(0);
+
+  const heights = await page.locator("[data-testid='book-surface']").evaluate((node) => {
+    const surface = node as HTMLElement;
+    const article = surface.querySelector("article");
+    return {
+      surfaceHeight: surface.clientHeight,
+      articleHeight: article instanceof HTMLElement ? article.clientHeight : 0,
+      articleScrollHeight: article instanceof HTMLElement ? article.scrollHeight : 0,
+    };
+  });
+
+  expect(heights.articleScrollHeight).toBeLessThanOrEqual(heights.articleHeight + 4);
+});

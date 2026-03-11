@@ -1,0 +1,19 @@
+id: welcome-note
+slug: welcome-note
+order: 1
+title: Ugadi Greetings
+subtitle: A small welcome before the stories begin
+type: frontmatter
+hook: Welcome to a little Telugu book made for a quiet minute on your phone.
+takeaway: Swipe gently. This book is small on purpose.
+sourceLabel: "Encyclopaedia Britannica, “Ugadi”"
+sourceUrl: https://www.britannica.com/topic/Ugadi
+sourceQuality: reference
+pages:
+  - heading: Come in. The book begins here.
+    body: |
+      Happy Ugadi, and welcome.
+
+      This little book gathers a few bright things from Telugu memory: wit in the court of Tenali Ramakrishna, the music of the language, a deep old poem, temple hills, and one glance toward the rockets of Sriharikota.
+
+      It is meant to be read casually, one soft page at a time. Stay for a minute. Turn when you like.

@@ -1,0 +1,29 @@
+---
+import BookShell from "../../components/BookShell.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getBookScreens, getChapters, getScreenIndexForSlug } from "../../lib/book";
+
+export async function getStaticPaths() {
+  const chapters = await getChapters();
+
+  return chapters.map((chapter) => ({
+    params: { slug: chapter.slug },
+    props: {
+      chapterTitle: chapter.title,
+    },
+  }));
+}
+
+const { slug } = Astro.params;
+const { chapterTitle } = Astro.props;
+const requestedPage = Number(Astro.url.searchParams.get("page") ?? "1");
+const screens = await getBookScreens();
+const initialScreen = await getScreenIndexForSlug(slug, requestedPage);
+---
+
+<BaseLayout
+  title={`${chapterTitle} · A Little Book of Telugu Wonder`}
+  description={`Open ${chapterTitle} inside the QR-first Telugu cultural storybook.`}
+>
+  <BookShell screens={screens} initialScreen={initialScreen} />
+</BaseLayout>

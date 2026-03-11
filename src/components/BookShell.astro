@@ -1,0 +1,13 @@
+---
+import PageTurnBook from "./PageTurnBook";
+import type { BookScreen } from "../lib/book";
+
+type Props = {
+  screens: BookScreen[];
+  initialScreen?: number;
+};
+
+const { screens, initialScreen = 0 } = Astro.props;
+---
+
+<PageTurnBook client:load screens={screens} initialScreen={initialScreen} />

@@ -6,12 +6,30 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host 127.0.0.1 --port 4321 --strictPort",
+    "start": "astro dev --host 127.0.0.1 --port 4321 --strictPort",
+    "prebuild": "npm run report:storybook",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview --host 127.0.0.1 --port 4321 --strictPort",
+    "preview:test": "astro preview --host 127.0.0.1 --port 4321 --strictPort",
+    "astro": "astro",
+    "validate:content": "node scripts/validate-content.mjs",
+    "report:storybook": "node scripts/report-storybook.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
-    "astro": "^6.0.3"
+    "@astrojs/react": "^5.0.0",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/source-serif-4": "^5.2.9",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.1",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
   }
 }

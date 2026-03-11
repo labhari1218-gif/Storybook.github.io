@@ -1,0 +1,26 @@
+id: tirupati
+slug: tirupati
+order: 9
+title: Tirupati
+subtitle: The hill of steps, waiting, devotion, and arrival
+type: place
+hook: Tirupati is not only a temple visit. It is the feeling of moving with thousands toward one centre.
+takeaway: Some places are remembered not as sights alone, but as a shared movement of faith.
+sourceLabel: "Tirumala Tirupati Devasthanams, temple history"
+sourceUrl: https://www.tirumala.org/TTDTempleHistory.aspx
+sourceQuality: archive
+heroImage: tirupati-temple
+heroImageAlt: Entrance view of the Tirumala Venkateswara temple
+heroPlacement: opening-only
+imageCredit: Nikhilb239, via Wikimedia Commons
+imageLicense: CC BY-SA 4.0
+imageSourceUrl: https://commons.wikimedia.org/wiki/File:Tirumala_Venkateswara_temple_entrance_09062015.JPG
+pages:
+  - heading: A place carried by countless footsteps
+    body: |
+      Tirupati lives in memory as ascent, waiting, bells, vows, and the long patience of pilgrimage.
+
+      The hill does not feel empty even in silence. It feels held by generations who came before, climbed before dawn, stood in line, and carried home the sense of having arrived somewhere older than themselves.
+
+      That is why the name is more than a destination. It is an experience of devotion in motion.
+

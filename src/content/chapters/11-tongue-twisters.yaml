@@ -1,0 +1,32 @@
+id: tongue-twisters
+slug: tongue-twisters
+order: 12
+title: Telugu Tongue Twisters
+subtitle: A playful ending for quick mouths and brave readers
+type: extras
+hook: These are tiny obstacle courses built entirely out of sound.
+takeaway: End with a laugh. Telugu is serious enough for poetry and playful enough for speed.
+sourceLabel: "Dartmouth Folklore Archive, “Tongue Twisters”"
+sourceUrl: https://journeys.dartmouth.edu/folklorearchive/tongue-twisters-3/
+sourceQuality: folklore-record
+heroImage: telugu-manuscript
+heroImageAlt: Historic manuscript page written in Telugu script
+heroPlacement: opening-only
+imageCredit: Ms Sarah Welch, via Wikimedia Commons
+imageLicense: CC BY-SA 4.0
+imageSourceUrl: https://commons.wikimedia.org/wiki/File:Vedanta_Sara_manuscript,_page_4_recto,_Sanskrit,_Telugu_script.jpg
+pages:
+  - heading: Tap a line. Then say it faster.
+    body: |
+      Start slowly. Keep the sounds clear. Then try again before your tongue can relax.
+
+      These are shown in Romanized Telugu so anyone can join in quickly on a phone screen.
+extras:
+  - label: Rendu yerra laarilu nalugu nalla laarilu
+    value: Two red lorries, four black lorries. The r and l sounds start tangling almost immediately.
+  - label: Yerra lorry tella lorry
+    value: Red lorry, white lorry. Short, simple, and dangerous at speed.
+  - label: Kekeeka Kekiki Kaaka Kaakiki vuntudaa?
+    value: A teasing chain of tiny sound shifts. One wrong vowel and the whole line wobbles.
+  - label: Bujjigadu bajjilu tini Bujjiga bajjonnadu
+    value: Bujji ate bajjis and became bajji-like himself. Say it three times and try not to smile.

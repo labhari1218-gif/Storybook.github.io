@@ -1,0 +1,26 @@
+id: sir-m-visvesvaraya
+slug: sir-m-visvesvaraya
+order: 8
+title: Sir M. Visvesvaraya
+subtitle: A life shaped by engineering, discipline, and public work
+type: profile
+hook: Some people build a monument. He helped build the systems behind modern life.
+takeaway: His legacy still feels modern because it was always aimed at practical improvement.
+sourceLabel: "Encyclopaedia Britannica, “Bharat Ratna”"
+sourceUrl: https://www.britannica.com/topic/Bharat-Ratna
+sourceQuality: reference
+heroImage: visvesvaraya-portrait
+heroImageAlt: Portrait of Sir M. Visvesvaraya in his younger years
+heroPlacement: opening-only
+imageCredit: Unknown author, via Wikimedia Commons
+imageLicense: Public domain
+imageSourceUrl: https://commons.wikimedia.org/wiki/File:Vishveshvarayya_in_his_30%27s.jpg
+pages:
+  - heading: Engineer first, legend second
+    body: |
+      Sir M. Visvesvaraya was one of India's most respected engineers and later served as Diwan of Mysore from 1912 to 1918.
+
+      He is remembered for disciplined public work: major irrigation and engineering projects, planning influence in Mysore, and flood-control work connected with Hyderabad.
+
+      The lasting inspiration is not one dramatic anecdote, but a career built on precision, duty, and the belief that infrastructure can widen a society's future.
+

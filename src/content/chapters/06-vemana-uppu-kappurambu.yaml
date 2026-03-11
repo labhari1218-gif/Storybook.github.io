@@ -1,0 +1,33 @@
+id: vemana-uppu-kappurambu
+slug: vemana-uppu-kappurambu
+order: 7
+title: Vemana
+subtitle: Uppu kappurambu
+type: poem
+hook: A short poem can hold a whole philosophy if every line is clean.
+takeaway: What seems the same from afar reveals its truth only in living.
+sourceLabel: "C.P. Brown, The Verses of Vemana (1911)"
+sourceUrl: https://commons.wikimedia.org/wiki/File:The_Verses_Of_Vemana_(1911).pdf
+sourceQuality: archive
+heroImage: vemana-verses
+heroImageAlt: Page preview from The Verses of Vemana (1911)
+heroPlacement: opening-only
+imageCredit: Charles Philip Brown, via Wikimedia Commons
+imageLicense: Public domain
+imageSourceUrl: https://commons.wikimedia.org/wiki/File:The_Verses_Of_Vemana_(1911).pdf
+pages:
+  - heading: Uppu kappurambu
+    body: |
+      Salt and camphor may seem alike at a glance, yet taste and fragrance reveal their difference at once.
+
+      Vemana turns that simple contrast into a human lesson: outward similarity means very little. Character discloses itself only in experience.
+    displayLines:
+      - Uppu kappurambu nokka polikanundu
+      - Chooda chooda ruchula jaada veru
+      - Purushulandu punyapurushulu verayaa
+      - Vishwadabhirama vinura Vema
+    translationLines:
+      - Salt and camphor may look as if they are one,
+      - but on the tongue and in the air they part ways.
+      - "So it is among people:"
+      - the truly good reveal themselves in the living.

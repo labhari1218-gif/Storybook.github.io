@@ -1,0 +1,158 @@
+{
+  "generatedAt": "2026-03-11T23:45:47.998Z",
+  "selectedContent": [
+    {
+      "title": "Ugadi Greetings",
+      "note": "Added as the new warm Ugadi opening note before the first story."
+    },
+    {
+      "title": "A Strange Cat",
+      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
+    },
+    {
+      "title": "Face-Saving Formula",
+      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
+    },
+    {
+      "title": "Raman the Horse Trainer",
+      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
+    },
+    {
+      "title": "Raman Outsmarts a Cheat",
+      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
+    },
+    {
+      "title": "Why Telugu Is Called the Italian of the East",
+      "note": "Included as a single-page explainer chapter in the expanded 21-screen book."
+    },
+    {
+      "title": "Vemana",
+      "note": "Included as a single-page poem chapter in the expanded 21-screen book."
+    },
+    {
+      "title": "Sir M. Visvesvaraya",
+      "note": "Included as a single-page profile chapter in the expanded 21-screen book."
+    },
+    {
+      "title": "Tirupati",
+      "note": "Included as a single-page place chapter in the expanded 21-screen book."
+    },
+    {
+      "title": "Yadadri Lakshmi Narasimha Swamy",
+      "note": "Included as a single-page place chapter in the expanded 21-screen book."
+    },
+    {
+      "title": "Sriharikota",
+      "note": "Included as a single-page place chapter in the expanded 21-screen book."
+    },
+    {
+      "title": "Telugu Tongue Twisters",
+      "note": "Included as a single-page extras chapter in the expanded 21-screen book."
+    }
+  ],
+  "rejectedContent": [
+    {
+      "title": "Sharing the Reward",
+      "reason": "Rejected because the reviewed source page appeared incomplete and was not safe to polish into the new book."
+    },
+    {
+      "title": "Eating Sand",
+      "reason": "Replaced by “Face-Saving Formula,” which carries a cleaner sand-challenge thread inside the same trusted Tenali collection."
+    }
+  ],
+  "sourceNotes": [
+    {
+      "title": "Tenali stories",
+      "note": "All four stories are treated as concise folk retellings from the same Katha Kids collection, not as literal court history."
+    },
+    {
+      "title": "Italian of the East",
+      "note": "Britannica anchors the language facts; the phrase is framed as a long-circulating nickname tied to sound rather than a hard classification."
+    },
+    {
+      "title": "Vemana poem",
+      "note": "The poem page is grounded in the historical C.P. Brown edition while the public translation is newly rewritten for readability."
+    },
+    {
+      "title": "Temples and Sriharikota",
+      "note": "Tirupati, Yadadri, and Sriharikota are internally grounded in official or institutional sources but presented publicly as elegant short reading pages."
+    }
+  ],
+  "imageSources": [
+    {
+      "title": "Stone Chariot - Hampi",
+      "credit": "Ankit, via Wikimedia Commons",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "title": "King Krishnadevaraya, Vijayanagara emperor",
+      "credit": "Chavakiran, via Telugu Wikipedia / Wikimedia Commons",
+      "license": "Public domain"
+    },
+    {
+      "title": "Vedanta Sara manuscript, page 4 recto, Sanskrit, Telugu script",
+      "credit": "Ms Sarah Welch, via Wikimedia Commons",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "title": "Vishveshvarayya in his 30s",
+      "credit": "Unknown author, via Wikimedia Commons",
+      "license": "Public domain"
+    },
+    {
+      "title": "Krishna Raja Sagara dam",
+      "credit": "Vaishu2, via Wikimedia Commons",
+      "license": "Public domain"
+    },
+    {
+      "title": "Tirumala Venkateswara temple entrance",
+      "credit": "Nikhilb239, via Wikimedia Commons",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "title": "Sri Lakshminarasimha Swamy Temple, Yadadri",
+      "credit": "Ravindraoudeptling, via Wikimedia Commons",
+      "license": "CC BY 4.0"
+    },
+    {
+      "title": "Launch from Satish Dhawan Space Centre, Sriharikota",
+      "credit": "Indian Space Research Organisation, via Wikimedia Commons",
+      "license": "GODL-India"
+    },
+    {
+      "title": "The Verses of Vemana (1911), page preview",
+      "credit": "Charles Philip Brown, via Wikimedia Commons",
+      "license": "Public domain"
+    }
+  ],
+  "editorialSoftening": [
+    {
+      "claim": "Visible source-and-credit footers",
+      "action": "Removed entirely from the public reading flow so the site behaves like a small book, not a reference ledger."
+    },
+    {
+      "claim": "“Italian of the East”",
+      "action": "Kept as a graceful question-led explainer instead of a dramatic unsupported claim."
+    },
+    {
+      "claim": "Visvesvaraya folklore anecdotes",
+      "action": "Left out in favor of widely documented engineering and public-service achievements."
+    },
+    {
+      "claim": "Per-page image repetition",
+      "action": "Changed to one strong image per chapter so later story pages can breathe as text-only paper pages."
+    }
+  ],
+  "validation": {
+    "status": "pass",
+    "checksPassed": 5,
+    "details": [
+      "12 chapter files loaded successfully.",
+      "21 total book screens resolved, including the cover.",
+      "4 story chapters present, each capped at exactly 3 pages.",
+      "Public build keeps only / and /read/[slug] as book-facing routes.",
+      "20 remote source and image URLs responded successfully."
+    ],
+    "errors": []
+  }
+}

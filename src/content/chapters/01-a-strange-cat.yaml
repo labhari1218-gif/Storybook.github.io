@@ -1,0 +1,40 @@
+id: a-strange-cat
+slug: a-strange-cat
+order: 2
+title: A Strange Cat
+subtitle: Tenali lets one small detail defeat a room full of pride
+type: story
+hook: What kind of cat runs away from milk?
+takeaway: A joke can win the day, but kindness matters more than cleverness.
+sourceLabel: "Katha Kids, “Tenali Tales: Raman and the cat”"
+sourceUrl: https://kathakids.com/folktales/tenali-raman-stories/tenali-tales-raman-and-the-cat/
+sourceQuality: folklore-adaptation
+heroImage: vijayanagara-krishnadevaraya
+heroImageAlt: Statue of King Krishnadevaraya associated with the Vijayanagara court
+heroPlacement: opening-only
+imageCredit: Chavakiran, via Telugu Wikipedia / Wikimedia Commons
+imageLicense: Public domain
+imageSourceUrl: https://commons.wikimedia.org/wiki/File:Vijayanagara.jpg
+pages:
+  - heading: The court wanted the cleverest cat
+    body: |
+      One day, the ministers at Krishnadevaraya's court began praising their cats.
+
+      Mine is the fastest, said one. Mine is the smartest, said another.
+
+      The king smiled and turned their bragging into a challenge. Bring me a cat, he said, that can do what no other cat does.
+  - heading: One bowl of milk changed everything
+    body: |
+      Bowls of milk were placed before the animals.
+
+      Every cat rushed forward, except Raman's. The moment it saw the milk, it sprang back and fled as if the bowl itself were dangerous.
+
+      The court burst into laughter. What kind of cat fears milk?
+  - heading: Raman explained the trick
+    body: |
+      Raman bowed and told the truth.
+
+      Once, he said, the cat had tasted milk that was too hot. Since then, even cool milk looked suspicious.
+
+      The king laughed, the ministers fell silent, and the strangest cat in court became the most memorable one.
+
