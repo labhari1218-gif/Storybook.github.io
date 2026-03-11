@@ -1,7 +1,9 @@
 import { expect, test } from "@playwright/test";
 
+const base = "/Storybook.github.io";
+
 test("book opens on cover and front note before story one", async ({ page }) => {
-  await page.goto("/");
+  await page.goto(`${base}/`);
 
   await expect(page.getByText("A Little Book of Telugu Wonder")).toBeVisible();
   await expect(page.getByTestId("progress-text")).toHaveText("01 / 21");
@@ -15,7 +17,7 @@ test("book opens on cover and front note before story one", async ({ page }) => 
 });
 
 test("story opening has one image and later pages are text only", async ({ page }) => {
-  await page.goto("/read/a-strange-cat");
+  await page.goto(`${base}/read/a-strange-cat`);
 
   await expect(page.getByTestId("screen-image")).toBeVisible();
   await page.getByTestId("nav-next").click();
@@ -28,7 +30,7 @@ test("story opening has one image and later pages are text only", async ({ page 
 });
 
 test("tap and swipe still turn pages, extras still expand, and cover reset works", async ({ page }) => {
-  await page.goto("/");
+  await page.goto(`${base}/`);
 
   const surface = page.getByTestId("book-surface");
   const box = await surface.boundingBox();
@@ -45,7 +47,7 @@ test("tap and swipe still turn pages, extras still expand, and cover reset works
   await page.touchscreen.tap(box.x + 24, box.y + box.height / 2);
   await expect(page.getByText("Come in. The book begins here.")).toBeVisible();
 
-  await page.goto("/read/tongue-twisters");
+  await page.goto(`${base}/read/tongue-twisters`);
   await page.getByRole("button", { name: /Yerra lorry tella lorry/i }).click();
   await expect(page.getByText(/Red lorry, white lorry/i)).toBeVisible();
 
@@ -54,22 +56,22 @@ test("tap and swipe still turn pages, extras still expand, and cover reset works
 });
 
 test("deep links resolve correctly and public credits/report routes are gone", async ({ page }) => {
-  await page.goto("/read/sir-m-visvesvaraya");
+  await page.goto(`${base}/read/sir-m-visvesvaraya`);
   await expect(page.getByText("Engineer first, legend second")).toBeVisible();
   await expect(page.getByAltText(/Portrait of Sir M. Visvesvaraya/i)).toBeVisible();
 
-  await page.goto("/read/italian-of-the-east");
+  await page.goto(`${base}/read/italian-of-the-east`);
   await expect(page.getByText("Have you ever wondered why Telugu is called the Italian of the East?")).toBeVisible();
 
-  const creditsResponse = await page.goto("/credits");
+  const creditsResponse = await page.goto(`${base}/credits`);
   expect(creditsResponse?.status()).toBe(404);
 
-  const reportResponse = await page.goto("/report");
+  const reportResponse = await page.goto(`${base}/report`);
   expect(reportResponse?.status()).toBe(404);
 });
 
 test("public reading flow contains no visible source links and fits mobile viewport", async ({ page }) => {
-  await page.goto("/read/tirupati");
+  await page.goto(`${base}/read/tirupati`);
   await expect(page.getByText("A place carried by countless footsteps")).toBeVisible();
   await expect(page.getByText(/Katha Kids|Britannica|Wikimedia|Image source/i)).toHaveCount(0);
 

@@ -14,6 +14,23 @@ type Props = {
   initialScreen?: number;
 };
 
+const baseUrl = import.meta.env.BASE_URL;
+
+function withBase(pathname: string) {
+  const normalizedBase = baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
+  const normalizedPath = pathname.startsWith("/") ? pathname : `/${pathname}`;
+
+  if (!normalizedBase) {
+    return normalizedPath;
+  }
+
+  if (normalizedBase === "/") {
+    return normalizedPath;
+  }
+
+  return `${normalizedBase}${normalizedPath}`;
+}
+
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
 }
@@ -430,17 +447,18 @@ export default function PageTurnBook({ screens, initialScreen = 0 }: Props) {
 
   const syncUrl = useEffectEvent((nextScreen: BookScreen) => {
     const query = new URLSearchParams();
+    const isReadPath = window.location.pathname.includes("/read/");
 
     if (nextScreen.kind === "cover") {
-      window.history.replaceState({}, "", "/");
+      window.history.replaceState({}, "", withBase("/"));
       return;
     }
 
     query.set("page", String(nextScreen.pageNumber));
 
-    const path = window.location.pathname.startsWith("/read/")
-      ? `/read/${nextScreen.slug}?${query.toString()}`
-      : `/?chapter=${nextScreen.slug}&${query.toString()}`;
+    const path = isReadPath
+      ? withBase(`/read/${nextScreen.slug}?${query.toString()}`)
+      : withBase(`/?chapter=${nextScreen.slug}&${query.toString()}`);
 
     window.history.replaceState({}, "", path);
   });
