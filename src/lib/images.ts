@@ -12,6 +12,7 @@ import storyPotIllustration from "../assets/images/story-pot-illustration.svg";
 import storyHorseIllustration from "../assets/images/story-horse-illustration.svg";
 import storyCheatIllustration from "../assets/images/story-cheat-illustration.svg";
 import tongueTwistersIllustration from "../assets/images/tongue-twisters-illustration.svg";
+import vemanaPortraitIllustration from "../assets/images/vemana-portrait-illustration.svg";
 import imageManifest from "../data/image-manifest.json";
 
 const rawAssets = {
@@ -29,6 +30,7 @@ const rawAssets = {
   "story-horse-illustration": storyHorseIllustration,
   "story-cheat-illustration": storyCheatIllustration,
   "tongue-twisters-illustration": tongueTwistersIllustration,
+  "vemana-portrait-illustration": vemanaPortraitIllustration,
 } as const;
 
 export type ImageId = keyof typeof rawAssets;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T00:14:19.432Z",
+  "generatedAt": "2026-03-12T09:55:04.405Z",
   "selectedContent": [
     {
       "title": "Ugadi Greetings",
@@ -14,11 +14,11 @@
       "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
     },
     {
-      "title": "Raman the Horse Trainer",
+      "title": "Rama the Horse Trainer",
       "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
     },
     {
-      "title": "Raman Outsmarts a Cheat",
+      "title": "Rama Outsmarts a Cheat",
       "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
     },
     {
@@ -125,7 +125,7 @@
       "license": "Public domain"
     },
     {
-      "title": "A Strange Cat story illustration",
+      "title": "Tenali Rama and cat story illustration",
       "credit": "Designed for this storybook",
       "license": "Original vector illustration"
     },
@@ -140,12 +140,17 @@
       "license": "Original vector illustration"
     },
     {
-      "title": "Raman Outsmarts a Cheat story illustration",
+      "title": "Rama Outsmarts a Cheat story illustration",
       "credit": "Designed for this storybook",
       "license": "Original vector illustration"
     },
     {
       "title": "Telugu tongue twisters illustration",
+      "credit": "Designed for this storybook",
+      "license": "Original vector illustration"
+    },
+    {
+      "title": "Vemana portrait illustration",
       "credit": "Designed for this storybook",
       "license": "Original vector illustration"
     }
@@ -176,7 +181,7 @@
       "21 total book screens resolved, including the cover.",
       "4 story chapters present, each capped at exactly 3 pages.",
       "Public build keeps only / and /read/[slug] as book-facing routes.",
-      "20 remote source and image URLs responded successfully."
+      "Remote source and image URL checks were skipped for CI/deploy."
     ],
     "errors": []
   }

@@ -98,6 +98,13 @@ a {
     var(--shadow-paper);
 }
 
+.page-turn-active {
+  backface-visibility: hidden;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
 .readable-copy p + p {
   margin-top: 0.85rem;
 }
@@ -108,34 +115,44 @@ a {
 
 @keyframes page-forward {
   0% {
-    opacity: 0;
-    transform: translate3d(22px, 0, 0) rotateY(-5deg);
+    opacity: 0.42;
+    transform: translate3d(34px, 0, 0) scale(0.985) rotateY(-7deg);
+  }
+
+  55% {
+    opacity: 0.82;
+    transform: translate3d(10px, 0, 0) scale(0.996) rotateY(-2deg);
   }
 
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) rotateY(0deg);
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
   }
 }
 
 @keyframes page-backward {
   0% {
-    opacity: 0;
-    transform: translate3d(-22px, 0, 0) rotateY(5deg);
+    opacity: 0.42;
+    transform: translate3d(-34px, 0, 0) scale(0.985) rotateY(7deg);
+  }
+
+  55% {
+    opacity: 0.82;
+    transform: translate3d(-10px, 0, 0) scale(0.996) rotateY(2deg);
   }
 
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) rotateY(0deg);
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
   }
 }
 
 .animate-page-forward {
-  animation: page-forward 300ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: page-forward 420ms cubic-bezier(0.16, 0.84, 0.24, 1) both;
 }
 
 .animate-page-backward {
-  animation: page-backward 300ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation: page-backward 420ms cubic-bezier(0.16, 0.84, 0.24, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {

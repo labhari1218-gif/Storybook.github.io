@@ -25,7 +25,7 @@ test("story opening has one image and later pages are text only", async ({ page 
   await expect(page.getByTestId("screen-image")).toHaveCount(0);
 
   await page.getByTestId("nav-next").click();
-  await expect(page.getByText("Raman explained the trick")).toBeVisible();
+  await expect(page.getByText("Rama explained the trick")).toBeVisible();
   await expect(page.getByTestId("screen-image")).toHaveCount(0);
 });
 

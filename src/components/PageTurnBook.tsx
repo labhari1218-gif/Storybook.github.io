@@ -418,7 +418,7 @@ function ScreenCard({
     <article
       key={screen.id}
       className={[
-        "paper-sheet page-turn-shadow touch-highlight flex h-full flex-col rounded-[32px] px-5 pb-[calc(env(safe-area-inset-bottom)+1rem)] pt-[calc(env(safe-area-inset-top)+1rem)]",
+        "paper-sheet page-turn-shadow page-turn-active touch-highlight flex h-full flex-col rounded-[32px] px-5 pb-[calc(env(safe-area-inset-bottom)+1rem)] pt-[calc(env(safe-area-inset-top)+1rem)]",
         reducedMotion ? "" : direction >= 0 ? "animate-page-forward" : "animate-page-backward",
       ].join(" ")}
     >
@@ -574,6 +574,7 @@ export default function PageTurnBook({ screens, initialScreen = 0 }: Props) {
           className="relative flex-1"
           onPointerDown={handlePointerDown}
           onPointerUp={handlePointerUp}
+          style={{ touchAction: "pan-y pinch-zoom" }}
         >
           <div className="absolute inset-0 translate-y-2 rounded-[32px] border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.04)]" />
           <ScreenCard

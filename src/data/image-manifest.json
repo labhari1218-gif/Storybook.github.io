@@ -73,7 +73,7 @@
   },
   "story-cat-illustration": {
     "path": "src/assets/images/story-cat-illustration.svg",
-    "title": "A Strange Cat story illustration",
+    "title": "Tenali Rama and cat story illustration",
     "credit": "Designed for this storybook",
     "license": "Original vector illustration",
     "presentation": "illustration"
@@ -94,7 +94,7 @@
   },
   "story-cheat-illustration": {
     "path": "src/assets/images/story-cheat-illustration.svg",
-    "title": "Raman Outsmarts a Cheat story illustration",
+    "title": "Rama Outsmarts a Cheat story illustration",
     "credit": "Designed for this storybook",
     "license": "Original vector illustration",
     "presentation": "illustration"
@@ -102,6 +102,13 @@
   "tongue-twisters-illustration": {
     "path": "src/assets/images/tongue-twisters-illustration.svg",
     "title": "Telugu tongue twisters illustration",
+    "credit": "Designed for this storybook",
+    "license": "Original vector illustration",
+    "presentation": "illustration"
+  },
+  "vemana-portrait-illustration": {
+    "path": "src/assets/images/vemana-portrait-illustration.svg",
+    "title": "Vemana portrait illustration",
     "credit": "Designed for this storybook",
     "license": "Original vector illustration",
     "presentation": "illustration"

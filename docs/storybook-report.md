@@ -5,8 +5,8 @@
 - Ugadi Greetings: Added as the new warm Ugadi opening note before the first story.
 - A Strange Cat: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
 - Face-Saving Formula: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
-- Raman the Horse Trainer: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
-- Raman Outsmarts a Cheat: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
+- Rama the Horse Trainer: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
+- Rama Outsmarts a Cheat: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
 - Why Telugu Is Called the Italian of the East: Included as a single-page explainer chapter in the expanded 21-screen book.
 - Vemana: Included as a single-page poem chapter in the expanded 21-screen book.
 - Sir M. Visvesvaraya: Included as a single-page profile chapter in the expanded 21-screen book.
@@ -38,11 +38,12 @@
 - Sri Lakshminarasimha Swamy Temple, Yadadri: Ravindraoudeptling, via Wikimedia Commons (CC BY 4.0)
 - Launch from Satish Dhawan Space Centre, Sriharikota: Indian Space Research Organisation, via Wikimedia Commons (GODL-India)
 - The Verses of Vemana (1911), page preview: Charles Philip Brown, via Wikimedia Commons (Public domain)
-- A Strange Cat story illustration: Designed for this storybook (Original vector illustration)
+- Tenali Rama and cat story illustration: Designed for this storybook (Original vector illustration)
 - Face-Saving Formula story illustration: Designed for this storybook (Original vector illustration)
 - Horse Trainer story illustration: Designed for this storybook (Original vector illustration)
-- Raman Outsmarts a Cheat story illustration: Designed for this storybook (Original vector illustration)
+- Rama Outsmarts a Cheat story illustration: Designed for this storybook (Original vector illustration)
 - Telugu tongue twisters illustration: Designed for this storybook (Original vector illustration)
+- Vemana portrait illustration: Designed for this storybook (Original vector illustration)
 
 ## Editorial Softening
 
@@ -59,4 +60,4 @@
 - 21 total book screens resolved, including the cover.
 - 4 story chapters present, each capped at exactly 3 pages.
 - Public build keeps only / and /read/[slug] as book-facing routes.
-- 20 remote source and image URLs responded successfully.
+- Remote source and image URL checks were skipped for CI/deploy.
