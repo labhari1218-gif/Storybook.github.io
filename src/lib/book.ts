@@ -43,6 +43,7 @@ export type ResolvedChapter = {
   sourceQuality: SourceQuality;
   heroImage?: ImageId;
   heroImageAlt?: string;
+  heroImageCaption?: string;
   heroPlacement: HeroPlacement;
   imageCredit?: string;
   imageLicense?: string;
@@ -78,6 +79,7 @@ export type BookScreen = {
   body: string;
   image?: ResolvedImage;
   imageAlt?: string;
+  imageCaption?: string;
   chapterIndex: number;
   chapterCount: number;
   pageNumber: number;
@@ -105,8 +107,9 @@ const coverScreenBase = {
   heading: "Open into Telugu wonder.",
   body:
     "Begin with an Ugadi welcome, wander through four quick Tenali stories, pause for a poem, visit temple hills, and end where rockets rise from the coast.",
-  image: imageMap["stone-chariot-hampi"],
-  imageAlt: "Stone Chariot at Hampi against a bright sky",
+  image: imageMap["vijayanagara-krishnadevaraya"],
+  imageAlt: "Sri Krishnadevaraya associated with the Vijayanagara court",
+  imageCaption: "Sri Krishnadevaraya",
   chapterIndex: 0,
   chapterCount: 0,
   pageNumber: 1,
@@ -214,6 +217,7 @@ export async function getBookScreens() {
         body: page.body,
         image: screenImage.image,
         imageAlt: screenImage.imageAlt,
+        imageCaption: pageIndex === 0 ? chapter.heroImageCaption : undefined,
         chapterIndex: chapterOffset + 1,
         chapterCount: chapters.length,
         pageNumber: pageIndex + 1,

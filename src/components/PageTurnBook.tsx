@@ -169,27 +169,34 @@ function ImageBlock({
   const height = asset.height;
 
   return (
-    <div
-      data-testid="screen-image"
-      className={[
-        "relative overflow-hidden",
-        heightClass,
-        isIllustration ? "bg-[linear-gradient(180deg,rgba(255,248,238,0.96),rgba(241,229,208,0.92))]" : "",
-      ].join(" ")}
-    >
-      <img
-        src={src}
-        width={width}
-        height={height}
-        alt={screen.imageAlt}
+    <div>
+      <div
+        data-testid="screen-image"
         className={[
-          "h-full w-full",
-          isIllustration ? "object-contain p-4" : "object-cover",
+          "relative overflow-hidden",
+          heightClass,
+          isIllustration ? "bg-[linear-gradient(180deg,rgba(255,248,238,0.96),rgba(241,229,208,0.92))]" : "",
         ].join(" ")}
-        draggable={false}
-      />
-      {overlay && !isIllustration ? (
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[rgba(32,21,14,0.28)] to-transparent" />
+      >
+        <img
+          src={src}
+          width={width}
+          height={height}
+          alt={screen.imageAlt}
+          className={[
+            "h-full w-full",
+            isIllustration ? "object-contain p-4" : "object-cover",
+          ].join(" ")}
+          draggable={false}
+        />
+        {overlay && !isIllustration ? (
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[rgba(32,21,14,0.28)] to-transparent" />
+        ) : null}
+      </div>
+      {screen.imageCaption ? (
+        <p className="border-t border-[rgba(118,85,57,0.12)] bg-[rgba(255,252,246,0.86)] px-4 py-2 text-[0.76rem] tracking-[0.14em] text-[var(--ink-muted)] uppercase">
+          {screen.imageCaption}
+        </p>
       ) : null}
     </div>
   );

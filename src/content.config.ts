@@ -35,6 +35,7 @@ const chapters = defineCollection({
     ]),
     heroImage: z.string().min(1).optional(),
     heroImageAlt: z.string().min(1).optional(),
+    heroImageCaption: z.string().min(1).optional(),
     heroPlacement: z.enum(["opening-only", "full-chapter"]).default("opening-only"),
     imageCredit: z.string().min(1).optional(),
     imageLicense: z.string().min(1).optional(),
