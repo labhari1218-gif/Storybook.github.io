@@ -145,6 +145,8 @@ export async function runAudit() {
     .sort((left, right) => left.order - right.order);
   const errors = [];
   const details = [];
+  const skipRemoteChecks =
+    process.env.SKIP_REMOTE_CHECKS === "true" || process.env.CI === "true";
 
   for (const record of chapterRecords) {
     for (const fieldName of requiredChapterFields) {
@@ -246,18 +248,22 @@ export async function runAudit() {
     urlsToCheck.set(image.sourceUrl, `manifest:${image.title}`);
   }
 
-  const urlResults = await Promise.all(
-    Array.from(urlsToCheck.keys()).map(async (url) => ({
-      url,
-      ...(await checkUrl(url)),
-    })),
-  );
+  const urlResults = skipRemoteChecks
+    ? []
+    : await Promise.all(
+        Array.from(urlsToCheck.keys()).map(async (url) => ({
+          url,
+          ...(await checkUrl(url)),
+        })),
+      );
 
-  urlResults.forEach((result) => {
-    if (!result.ok) {
-      errors.push(`remote check failed for ${result.url} (${result.status}${result.error ? `, ${result.error}` : ""})`);
-    }
-  });
+  if (!skipRemoteChecks) {
+    urlResults.forEach((result) => {
+      if (!result.ok) {
+        errors.push(`remote check failed for ${result.url} (${result.status}${result.error ? `, ${result.error}` : ""})`);
+      }
+    });
+  }
 
   const creditsPath = path.join(pagesDir, "credits.astro");
   const reportPath = path.join(pagesDir, "report.astro");
@@ -271,7 +277,11 @@ export async function runAudit() {
   details.push(`${totalScreens} total book screens resolved, including the cover.`);
   details.push(`4 story chapters present, each capped at exactly 3 pages.`);
   details.push(`Public build keeps only / and /read/[slug] as book-facing routes.`);
-  details.push(`${urlResults.filter((result) => result.ok).length} remote source and image URLs responded successfully.`);
+  if (skipRemoteChecks) {
+    details.push("Remote source and image URL checks were skipped for CI/deploy.");
+  } else {
+    details.push(`${urlResults.filter((result) => result.ok).length} remote source and image URLs responded successfully.`);
+  }
 
   const selectedContent = chapters.map((chapter) => ({
     title: chapter.title,

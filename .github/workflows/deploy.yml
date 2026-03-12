@@ -35,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Build site
+        env:
+          SKIP_REMOTE_CHECKS: "true"
         run: npm run build
 
       - name: Upload artifact
