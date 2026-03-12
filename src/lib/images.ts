@@ -13,6 +13,8 @@ import storyHorseIllustration from "../assets/images/story-horse-illustration.sv
 import storyCheatIllustration from "../assets/images/story-cheat-illustration.svg";
 import tongueTwistersIllustration from "../assets/images/tongue-twisters-illustration.svg";
 import vemanaPortraitIllustration from "../assets/images/vemana-portrait-illustration.svg";
+import tenaliRamaWeb from "../assets/images/tenali-rama-web.jpg";
+import vemanaWeb from "../assets/images/vemana-web.jpg";
 import imageManifest from "../data/image-manifest.json";
 
 const rawAssets = {
@@ -31,6 +33,8 @@ const rawAssets = {
   "story-cheat-illustration": storyCheatIllustration,
   "tongue-twisters-illustration": tongueTwistersIllustration,
   "vemana-portrait-illustration": vemanaPortraitIllustration,
+  "tenali-rama-web": tenaliRamaWeb,
+  "vemana-web": vemanaWeb,
 } as const;
 
 export type ImageId = keyof typeof rawAssets;

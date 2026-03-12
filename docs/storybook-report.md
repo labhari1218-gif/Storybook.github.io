@@ -44,6 +44,8 @@
 - Rama Outsmarts a Cheat story illustration: Designed for this storybook (Original vector illustration)
 - Telugu tongue twisters illustration: Designed for this storybook (Original vector illustration)
 - Vemana portrait illustration: Designed for this storybook (Original vector illustration)
+- Krishna Bharadwaj as Tenali Rama: Nikhil Bhat / Wikimedia Commons (CC BY-SA 4.0)
+- Yogi Vemana, Katarupalli: K.chandrakiran / Wikimedia Commons (CC BY-SA 4.0)
 
 ## Editorial Softening
 

@@ -9,11 +9,12 @@ takeaway: What seems the same from afar reveals its truth only in living.
 sourceLabel: "C.P. Brown, The Verses of Vemana (1911)"
 sourceUrl: https://commons.wikimedia.org/wiki/File:The_Verses_Of_Vemana_(1911).pdf
 sourceQuality: archive
-heroImage: vemana-portrait-illustration
-heroImageAlt: Stylized portrait illustration of Vemana
+heroImage: vemana-web
+heroImageAlt: Statue image representing Yogi Vemana
 heroPlacement: opening-only
-imageCredit: Designed for this storybook
-imageLicense: Original vector illustration
+imageCredit: K.chandrakiran / Wikimedia Commons
+imageLicense: CC BY-SA 4.0
+imageSourceUrl: https://commons.wikimedia.org/wiki/File:Yogi_Vemana_Katarupalli.jpg
 pages:
   - heading: Uppu kappurambu
     body: |
