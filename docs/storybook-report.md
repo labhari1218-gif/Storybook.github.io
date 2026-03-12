@@ -38,6 +38,11 @@
 - Sri Lakshminarasimha Swamy Temple, Yadadri: Ravindraoudeptling, via Wikimedia Commons (CC BY 4.0)
 - Launch from Satish Dhawan Space Centre, Sriharikota: Indian Space Research Organisation, via Wikimedia Commons (GODL-India)
 - The Verses of Vemana (1911), page preview: Charles Philip Brown, via Wikimedia Commons (Public domain)
+- A Strange Cat story illustration: Designed for this storybook (Original vector illustration)
+- Face-Saving Formula story illustration: Designed for this storybook (Original vector illustration)
+- Horse Trainer story illustration: Designed for this storybook (Original vector illustration)
+- Raman Outsmarts a Cheat story illustration: Designed for this storybook (Original vector illustration)
+- Telugu tongue twisters illustration: Designed for this storybook (Original vector illustration)
 
 ## Editorial Softening
 

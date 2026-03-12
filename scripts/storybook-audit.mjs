@@ -173,7 +173,7 @@ export async function runAudit() {
         errors.push(`${record.fileName}: heroImageAlt is required when heroImage is set`);
       }
 
-      if (!record.data.imageCredit || !record.data.imageLicense || !record.data.imageSourceUrl) {
+      if (!record.data.imageCredit || !record.data.imageLicense) {
         errors.push(`${record.fileName}: hero image metadata is incomplete`);
       }
     }
@@ -245,7 +245,9 @@ export async function runAudit() {
   }
 
   for (const image of imageEntries.map(([, value]) => value)) {
-    urlsToCheck.set(image.sourceUrl, `manifest:${image.title}`);
+    if (image.sourceUrl) {
+      urlsToCheck.set(image.sourceUrl, `manifest:${image.title}`);
+    }
   }
 
   const urlResults = skipRemoteChecks

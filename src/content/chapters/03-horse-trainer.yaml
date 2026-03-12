@@ -9,12 +9,11 @@ takeaway: What pulls the heart forward often matters more than what looks grand 
 sourceLabel: "Katha Kids, “Tenali Tales: Raman the horse trainer”"
 sourceUrl: https://kathakids.com/folktales/tenali-raman-stories/tenali-tales-raman-the-horse-trainer/
 sourceQuality: folklore-adaptation
-heroImage: stone-chariot-hampi
-heroImageAlt: Stone Chariot at Hampi from the Vijayanagara world
+heroImage: story-horse-illustration
+heroImageAlt: Stylized illustration of a horse chasing grass tied to a pole
 heroPlacement: opening-only
-imageCredit: Ankit, via Wikimedia Commons
-imageLicense: CC BY-SA 4.0
-imageSourceUrl: https://commons.wikimedia.org/wiki/File:Stone_Chariot_-_Hampi.jpg
+imageCredit: Designed for this storybook
+imageLicense: Original vector illustration
 pages:
   - heading: Everyone trusted the expensive horses
     body: |
@@ -37,4 +36,3 @@ pages:
       It crossed the finish first.
 
       When the king asked what the lesson was, Raman replied that a strong desire can create its own speed.
-

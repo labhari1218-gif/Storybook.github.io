@@ -9,12 +9,11 @@ takeaway: The safest hiding place is sometimes the one your enemy refuses to sus
 sourceLabel: "Katha Kids, “Tenali Tales: Raman outsmarts a cheat”"
 sourceUrl: https://kathakids.com/folktales/tenali-raman-stories/tenali-tales-raman-outsmarts-a-cheat/
 sourceQuality: folklore-adaptation
-heroImage: tirupati-temple
-heroImageAlt: Entrance view of the Tirumala Venkateswara temple
+heroImage: story-cheat-illustration
+heroImageAlt: Stylized illustration of a pillow hiding money between two travelers
 heroPlacement: opening-only
-imageCredit: Nikhilb239, via Wikimedia Commons
-imageLicense: CC BY-SA 4.0
-imageSourceUrl: https://commons.wikimedia.org/wiki/File:Tirumala_Venkateswara_temple_entrance_09062015.JPG
+imageCredit: Designed for this storybook
+imageLicense: Original vector illustration
 pages:
   - heading: A fellow traveller seemed too curious
     body: |
@@ -37,4 +36,3 @@ pages:
       Raman smiled. Every night, he said, I slipped it into your pillow. You searched everywhere except the place beneath your own head.
 
       The cheat had carried Raman's secret for the whole journey without ever guessing it.
-

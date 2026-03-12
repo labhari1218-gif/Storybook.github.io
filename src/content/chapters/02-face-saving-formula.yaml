@@ -9,12 +9,11 @@ takeaway: When force tries to dominate a room, wit can change the balance in a m
 sourceLabel: "Katha Kids, “Tenali Tales: Face-saving formula”"
 sourceUrl: https://kathakids.com/folktales/tenali-raman-stories/tenali-tales-face-saving-formula/
 sourceQuality: folklore-adaptation
-heroImage: vijayanagara-krishnadevaraya
-heroImageAlt: Statue of King Krishnadevaraya associated with the Vijayanagara court
+heroImage: story-pot-illustration
+heroImageAlt: Stylized illustration of Raman with a pot over his head facing a challenger
 heroPlacement: opening-only
-imageCredit: Chavakiran, via Telugu Wikipedia / Wikimedia Commons
-imageLicense: Public domain
-imageSourceUrl: https://commons.wikimedia.org/wiki/File:Vijayanagara.jpg
+imageCredit: Designed for this storybook
+imageLicense: Original vector illustration
 pages:
   - heading: A challenge came at the wrong time
     body: |
@@ -35,4 +34,3 @@ pages:
       Raman shut his eyes. An assistant threw sand across his face.
 
       The wrestler imagined the sting, the blur, the shame of standing helpless before the crowd, and gave up at once.
-

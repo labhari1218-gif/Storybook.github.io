@@ -162,17 +162,33 @@ function ImageBlock({
     return null;
   }
 
+  const asset = screen.image.asset;
+  const isIllustration = screen.image.presentation === "illustration";
+  const src = asset.src;
+  const width = asset.width;
+  const height = asset.height;
+
   return (
-    <div data-testid="screen-image" className={["relative overflow-hidden", heightClass].join(" ")}>
+    <div
+      data-testid="screen-image"
+      className={[
+        "relative overflow-hidden",
+        heightClass,
+        isIllustration ? "bg-[linear-gradient(180deg,rgba(255,248,238,0.96),rgba(241,229,208,0.92))]" : "",
+      ].join(" ")}
+    >
       <img
-        src={screen.image.asset.src}
-        width={screen.image.asset.width}
-        height={screen.image.asset.height}
+        src={src}
+        width={width}
+        height={height}
         alt={screen.imageAlt}
-        className="h-full w-full object-cover"
+        className={[
+          "h-full w-full",
+          isIllustration ? "object-contain p-4" : "object-cover",
+        ].join(" ")}
         draggable={false}
       />
-      {overlay ? (
+      {overlay && !isIllustration ? (
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[rgba(32,21,14,0.28)] to-transparent" />
       ) : null}
     </div>

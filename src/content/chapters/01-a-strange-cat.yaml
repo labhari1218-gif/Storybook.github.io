@@ -9,12 +9,11 @@ takeaway: A joke can win the day, but kindness matters more than cleverness.
 sourceLabel: "Katha Kids, “Tenali Tales: Raman and the cat”"
 sourceUrl: https://kathakids.com/folktales/tenali-raman-stories/tenali-tales-raman-and-the-cat/
 sourceQuality: folklore-adaptation
-heroImage: vijayanagara-krishnadevaraya
-heroImageAlt: Statue of King Krishnadevaraya associated with the Vijayanagara court
+heroImage: story-cat-illustration
+heroImageAlt: Stylized illustration of a cat recoiling from a bowl of milk
 heroPlacement: opening-only
-imageCredit: Chavakiran, via Telugu Wikipedia / Wikimedia Commons
-imageLicense: Public domain
-imageSourceUrl: https://commons.wikimedia.org/wiki/File:Vijayanagara.jpg
+imageCredit: Designed for this storybook
+imageLicense: Original vector illustration
 pages:
   - heading: The court wanted the cleverest cat
     body: |
@@ -37,4 +36,3 @@ pages:
       Once, he said, the cat had tasted milk that was too hot. Since then, even cool milk looked suspicious.
 
       The king laughed, the ministers fell silent, and the strangest cat in court became the most memorable one.
-

@@ -7,9 +7,14 @@ import tirupatiTemple from "../assets/images/tirupati-temple.jpg";
 import yadadriTemple from "../assets/images/yadadri-temple.jpg";
 import sriharikotaLaunch from "../assets/images/sriharikota-launch.jpg";
 import vemanaVerses from "../assets/images/vemana-verses.jpg";
+import storyCatIllustration from "../assets/images/story-cat-illustration.svg";
+import storyPotIllustration from "../assets/images/story-pot-illustration.svg";
+import storyHorseIllustration from "../assets/images/story-horse-illustration.svg";
+import storyCheatIllustration from "../assets/images/story-cheat-illustration.svg";
+import tongueTwistersIllustration from "../assets/images/tongue-twisters-illustration.svg";
 import imageManifest from "../data/image-manifest.json";
 
-const assets = {
+const rawAssets = {
   "stone-chariot-hampi": stoneChariotHampi,
   "vijayanagara-krishnadevaraya": vijayanagaraKrishnadevaraya,
   "telugu-manuscript": teluguManuscript,
@@ -19,26 +24,50 @@ const assets = {
   "yadadri-temple": yadadriTemple,
   "sriharikota-launch": sriharikotaLaunch,
   "vemana-verses": vemanaVerses,
+  "story-cat-illustration": storyCatIllustration,
+  "story-pot-illustration": storyPotIllustration,
+  "story-horse-illustration": storyHorseIllustration,
+  "story-cheat-illustration": storyCheatIllustration,
+  "tongue-twisters-illustration": tongueTwistersIllustration,
 } as const;
 
-export type ImageId = keyof typeof assets;
+export type ImageId = keyof typeof rawAssets;
+
+type AssetData = {
+  src: string;
+  width?: number;
+  height?: number;
+};
 
 export type ResolvedImage = {
   id: ImageId;
-  asset: (typeof assets)[ImageId];
+  asset: AssetData;
   title: string;
   credit: string;
   license: string;
-  sourceUrl: string;
+  sourceUrl?: string;
   path: string;
+  presentation?: "photo" | "illustration";
 };
 
+function normalizeAsset(asset: (typeof rawAssets)[ImageId]): AssetData {
+  if (typeof asset === "string") {
+    return { src: asset };
+  }
+
+  return {
+    src: asset.src,
+    width: asset.width,
+    height: asset.height,
+  };
+}
+
 export const imageMap: Record<ImageId, ResolvedImage> = Object.fromEntries(
-  Object.entries(assets).map(([id, asset]) => [
+  Object.entries(rawAssets).map(([id, asset]) => [
     id,
     {
       id: id as ImageId,
-      asset,
+      asset: normalizeAsset(asset as (typeof rawAssets)[ImageId]),
       ...(imageManifest[id as ImageId] as Omit<ResolvedImage, "asset" | "id">),
     },
   ]),
