@@ -15,6 +15,11 @@ import tongueTwistersIllustration from "../assets/images/tongue-twisters-illustr
 import vemanaPortraitIllustration from "../assets/images/vemana-portrait-illustration.svg";
 import tenaliRamaWeb from "../assets/images/tenali-rama-web.jpg";
 import vemanaWeb from "../assets/images/vemana-web.jpg";
+import baahubaliSwords from "../assets/images/quiz/baahubali-swords.svg";
+import baahubaliMountain from "../assets/images/quiz/baahubali-mountain.svg";
+import baahubaliCrown from "../assets/images/quiz/baahubali-crown.svg";
+import baahubaliBaby from "../assets/images/quiz/baahubali-baby.svg";
+import baahubaliFort from "../assets/images/quiz/baahubali-fort.svg";
 import imageManifest from "../data/image-manifest.json";
 
 const rawAssets = {
@@ -35,6 +40,11 @@ const rawAssets = {
   "vemana-portrait-illustration": vemanaPortraitIllustration,
   "tenali-rama-web": tenaliRamaWeb,
   "vemana-web": vemanaWeb,
+  "baahubali-swords": baahubaliSwords,
+  "baahubali-mountain": baahubaliMountain,
+  "baahubali-crown": baahubaliCrown,
+  "baahubali-baby": baahubaliBaby,
+  "baahubali-fort": baahubaliFort,
 } as const;
 
 export type ImageId = keyof typeof rawAssets;

@@ -128,5 +128,45 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yogi_Vemana_Katarupalli.jpg",
     "presentation": "photo"
+  },
+  "baahubali-swords": {
+    "path": "src/assets/images/quiz/baahubali-swords.svg",
+    "title": "Crossed swords emoji",
+    "credit": "OpenMoji via jsDelivr",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji/color/svg/2694.svg",
+    "presentation": "illustration"
+  },
+  "baahubali-mountain": {
+    "path": "src/assets/images/quiz/baahubali-mountain.svg",
+    "title": "Mountain emoji",
+    "credit": "OpenMoji via jsDelivr",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji/color/svg/26F0.svg",
+    "presentation": "illustration"
+  },
+  "baahubali-crown": {
+    "path": "src/assets/images/quiz/baahubali-crown.svg",
+    "title": "Crown emoji",
+    "credit": "OpenMoji via jsDelivr",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji/color/svg/1F451.svg",
+    "presentation": "illustration"
+  },
+  "baahubali-baby": {
+    "path": "src/assets/images/quiz/baahubali-baby.svg",
+    "title": "Baby emoji",
+    "credit": "OpenMoji via jsDelivr",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji/color/svg/1F476.svg",
+    "presentation": "illustration"
+  },
+  "baahubali-fort": {
+    "path": "src/assets/images/quiz/baahubali-fort.svg",
+    "title": "Castle emoji",
+    "credit": "OpenMoji via jsDelivr",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji/color/svg/1F3F0.svg",
+    "presentation": "illustration"
   }
 }

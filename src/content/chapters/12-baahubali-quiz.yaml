@@ -38,6 +38,8 @@ questions:
   - id: kattappa
     prompt: Guess this character.
     visualType: clue-card
+    image: baahubali-swords
+    imageAlt: Crossed swords icon representing a loyal warrior
     clueTitle: The loyal warrior
     clueText: He serves the royal family with fierce loyalty and carries a secret that shocks everyone.
     options:
@@ -52,6 +54,8 @@ questions:
   - id: mahendra
     prompt: Guess this character.
     visualType: clue-card
+    image: baahubali-mountain
+    imageAlt: Mountain icon representing a hidden heir's ascent
     clueTitle: The hidden heir
     clueText: He grows up away from the palace and later discovers his connection to Mahishmati.
     options:
@@ -66,6 +70,8 @@ questions:
   - id: shivagami
     prompt: Guess this character.
     visualType: clue-card
+    image: baahubali-crown
+    imageAlt: Crown icon representing the queen mother
     clueTitle: The queen mother
     clueText: She is regal, decisive, and one of the strongest political forces in the story.
     options:
@@ -80,6 +86,8 @@ questions:
   - id: sanga
     prompt: Who raised Mahendra after he was rescued as a child?
     visualType: clue-card
+    image: baahubali-baby
+    imageAlt: Baby icon representing a child raised far from the throne
     clueTitle: A child far from the throne
     clueText: He grows up away from the palace before learning who he really is.
     options:
@@ -94,6 +102,8 @@ questions:
   - id: mahishmati
     prompt: Which kingdom is at the center of the Baahubali story?
     visualType: clue-card
+    image: baahubali-fort
+    imageAlt: Castle icon representing the kingdom of Mahishmati
     clueTitle: The crown, the court, the conflict
     clueText: Nearly every major struggle in the story circles around this royal seat.
     options:

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import type { BookScreen, QuizQuestion, ScoreLabel } from "../lib/book";
+import type { BookScreen, ScoreLabel } from "../lib/book";
 
 type Props = {
   screen: BookScreen;
@@ -7,14 +7,6 @@ type Props = {
 
 type QuizPhase = "intro" | "question" | "feedback" | "complete";
 type AnswerResult = "correct" | "wrong" | "timeout" | null;
-
-const defaultMotifs = [
-  "Sword / Shield",
-  "Waterfall / Ascent",
-  "Crown / Throne",
-  "Village / Cradle",
-  "Fort / Standard",
-];
 
 function getScoreBand(score: number, scoreLabels: ScoreLabel[]) {
   return scoreLabels.find((band) => score >= band.min && score <= band.max) ?? scoreLabels[0];
@@ -215,9 +207,21 @@ export default function FinalQuizGame({ screen }: Props) {
                   {currentQuestion.clueTitle}
                 </h2>
               </div>
-              <span className="rounded-full border border-[rgba(154,79,43,0.18)] bg-[rgba(154,79,43,0.08)] px-3 py-1 text-[0.72rem] uppercase tracking-[0.16em] text-[var(--accent)]">
-                {defaultMotifs[currentQuestionIndex] ?? "Challenge"}
-              </span>
+              {currentQuestion.imageMeta ? (
+                <div
+                  data-testid="quiz-visual"
+                  className="flex h-16 w-16 items-center justify-center rounded-[18px] border border-[rgba(154,79,43,0.18)] bg-[rgba(154,79,43,0.08)] p-2"
+                >
+                  <img
+                    src={currentQuestion.imageMeta.asset.src}
+                    width={currentQuestion.imageMeta.asset.width}
+                    height={currentQuestion.imageMeta.asset.height}
+                    alt={currentQuestion.imageAlt ?? currentQuestion.clueTitle ?? "Quiz visual"}
+                    className="h-full w-full object-contain"
+                    draggable={false}
+                  />
+                </div>
+              ) : null}
             </div>
             <p className="mt-3 text-[0.96rem] leading-7 text-[var(--ink-muted)]">{currentQuestion.clueText}</p>
           </div>

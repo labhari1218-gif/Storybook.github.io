@@ -99,6 +99,7 @@ test("quiz renders, scores, replays, and works without images", async ({ page })
 
   await page.getByTestId("quiz-start").click();
   await expect(page.getByTestId("quiz-clue-card")).toBeVisible();
+  await expect(page.getByTestId("quiz-visual")).toBeVisible();
   await expect(page.getByTestId("screen-image")).toHaveCount(0);
   await expect(page.getByTestId("quiz-timer")).toHaveText("10s left");
 
