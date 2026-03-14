@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T10:35:54.942Z",
+  "generatedAt": "2026-03-14T08:11:20.538Z",
   "selectedContent": [
     {
       "title": "Ugadi Greetings",
@@ -7,47 +7,39 @@
     },
     {
       "title": "A Strange Cat",
-      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
-    },
-    {
-      "title": "Face-Saving Formula",
-      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
-    },
-    {
-      "title": "Rama the Horse Trainer",
-      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
-    },
-    {
-      "title": "Rama Outsmarts a Cheat",
-      "note": "Selected as one of the four short Tenali folk retellings, each fixed at 3 pages."
+      "note": "Selected as one of the two Tenali folk retellings anchoring the book, each fixed at 3 pages."
     },
     {
       "title": "Why Telugu Is Called the Italian of the East",
-      "note": "Included as a single-page explainer chapter in the expanded 21-screen book."
+      "note": "Included as a single-page explainer chapter in the shorter 15-screen book."
     },
     {
       "title": "Vemana",
-      "note": "Included as a single-page poem chapter in the expanded 21-screen book."
+      "note": "Included as a single-page poem chapter in the shorter 15-screen book."
     },
     {
       "title": "Sir M. Visvesvaraya",
-      "note": "Included as a single-page profile chapter in the expanded 21-screen book."
+      "note": "Included as a single-page profile chapter in the shorter 15-screen book."
     },
     {
       "title": "Tirupati",
-      "note": "Included as a single-page place chapter in the expanded 21-screen book."
+      "note": "Included as a single-page place chapter in the shorter 15-screen book."
     },
     {
       "title": "Yadadri Lakshmi Narasimha Swamy",
-      "note": "Included as a single-page place chapter in the expanded 21-screen book."
+      "note": "Included as a single-page place chapter in the shorter 15-screen book."
     },
     {
       "title": "Sriharikota",
-      "note": "Included as a single-page place chapter in the expanded 21-screen book."
+      "note": "Included as a single-page place chapter in the shorter 15-screen book."
     },
     {
       "title": "Telugu Tongue Twisters",
-      "note": "Included as a single-page extras chapter in the expanded 21-screen book."
+      "note": "Included as a single-page extras chapter in the shorter 15-screen book."
+    },
+    {
+      "title": "Rama Outsmarts a Cheat",
+      "note": "Selected as one of the two Tenali folk retellings anchoring the book, each fixed at 3 pages."
     }
   ],
   "rejectedContent": [
@@ -63,11 +55,11 @@
   "sourceNotes": [
     {
       "title": "Tenali stories",
-      "note": "All four stories are treated as concise folk retellings from the same Katha Kids collection, not as literal court history."
+      "note": "The two retained stories are treated as concise folk retellings from the same Katha Kids collection, not as literal court history."
     },
     {
       "title": "Italian of the East",
-      "note": "Britannica anchors the language facts; the phrase is framed as a long-circulating nickname tied to sound rather than a hard classification."
+      "note": "Britannica anchors the language facts; Henry Morris is named directly while the phrase remains framed as a long-circulating nickname tied to sound rather than a hard classification."
     },
     {
       "title": "Vemana poem",
@@ -187,9 +179,9 @@
     "status": "pass",
     "checksPassed": 5,
     "details": [
-      "12 chapter files loaded successfully.",
-      "21 total book screens resolved, including the cover.",
-      "4 story chapters present, each capped at exactly 3 pages.",
+      "10 chapter files loaded successfully.",
+      "15 total book screens resolved, including the cover.",
+      "2 story chapters present, each fixed at exactly 3 pages.",
       "Public build keeps only / and /read/[slug] as book-facing routes.",
       "Remote source and image URL checks were skipped for CI/deploy."
     ],

@@ -3,17 +3,15 @@
 ## Selected Content
 
 - Ugadi Greetings: Added as the new warm Ugadi opening note before the first story.
-- A Strange Cat: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
-- Face-Saving Formula: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
-- Rama the Horse Trainer: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
-- Rama Outsmarts a Cheat: Selected as one of the four short Tenali folk retellings, each fixed at 3 pages.
-- Why Telugu Is Called the Italian of the East: Included as a single-page explainer chapter in the expanded 21-screen book.
-- Vemana: Included as a single-page poem chapter in the expanded 21-screen book.
-- Sir M. Visvesvaraya: Included as a single-page profile chapter in the expanded 21-screen book.
-- Tirupati: Included as a single-page place chapter in the expanded 21-screen book.
-- Yadadri Lakshmi Narasimha Swamy: Included as a single-page place chapter in the expanded 21-screen book.
-- Sriharikota: Included as a single-page place chapter in the expanded 21-screen book.
-- Telugu Tongue Twisters: Included as a single-page extras chapter in the expanded 21-screen book.
+- A Strange Cat: Selected as one of the two Tenali folk retellings anchoring the book, each fixed at 3 pages.
+- Why Telugu Is Called the Italian of the East: Included as a single-page explainer chapter in the shorter 15-screen book.
+- Vemana: Included as a single-page poem chapter in the shorter 15-screen book.
+- Sir M. Visvesvaraya: Included as a single-page profile chapter in the shorter 15-screen book.
+- Tirupati: Included as a single-page place chapter in the shorter 15-screen book.
+- Yadadri Lakshmi Narasimha Swamy: Included as a single-page place chapter in the shorter 15-screen book.
+- Sriharikota: Included as a single-page place chapter in the shorter 15-screen book.
+- Telugu Tongue Twisters: Included as a single-page extras chapter in the shorter 15-screen book.
+- Rama Outsmarts a Cheat: Selected as one of the two Tenali folk retellings anchoring the book, each fixed at 3 pages.
 
 ## Rejected Content
 
@@ -22,8 +20,8 @@
 
 ## Source Notes
 
-- Tenali stories: All four stories are treated as concise folk retellings from the same Katha Kids collection, not as literal court history.
-- Italian of the East: Britannica anchors the language facts; the phrase is framed as a long-circulating nickname tied to sound rather than a hard classification.
+- Tenali stories: The two retained stories are treated as concise folk retellings from the same Katha Kids collection, not as literal court history.
+- Italian of the East: Britannica anchors the language facts; Henry Morris is named directly while the phrase remains framed as a long-circulating nickname tied to sound rather than a hard classification.
 - Vemana poem: The poem page is grounded in the historical C.P. Brown edition while the public translation is newly rewritten for readability.
 - Temples and Sriharikota: Tirupati, Yadadri, and Sriharikota are internally grounded in official or institutional sources but presented publicly as elegant short reading pages.
 
@@ -58,8 +56,8 @@
 
 - Status: pass
 - Checks Passed: 5
-- 12 chapter files loaded successfully.
-- 21 total book screens resolved, including the cover.
-- 4 story chapters present, each capped at exactly 3 pages.
+- 10 chapter files loaded successfully.
+- 15 total book screens resolved, including the cover.
+- 2 story chapters present, each fixed at exactly 3 pages.
 - Public build keeps only / and /read/[slug] as book-facing routes.
 - Remote source and image URL checks were skipped for CI/deploy.

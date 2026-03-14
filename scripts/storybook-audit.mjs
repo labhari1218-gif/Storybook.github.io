@@ -25,14 +25,12 @@ const requiredChapterFields = [
 
 const expectedStorySlugs = [
   "a-strange-cat",
-  "face-saving-formula",
-  "horse-trainer",
   "raman-outsmarts-a-cheat",
 ];
 
 const expectedChapterOrder = [
   "welcome-note",
-  ...expectedStorySlugs,
+  "a-strange-cat",
   "italian-of-the-east",
   "vemana-uppu-kappurambu",
   "sir-m-visvesvaraya",
@@ -40,6 +38,7 @@ const expectedChapterOrder = [
   "yadadri",
   "sriharikota",
   "tongue-twisters",
+  "raman-outsmarts-a-cheat",
 ];
 
 async function loadYamlDirectory(directoryPath) {
@@ -221,7 +220,7 @@ export async function runAudit() {
   assert(chapters.some((chapter) => chapter.slug === "sriharikota"), "Sriharikota chapter is missing", errors);
 
   const totalScreens = chapters.reduce((count, chapter) => count + chapter.pages.length, 1);
-  assert(totalScreens === 21, `book must resolve to 21 total screens, found ${totalScreens}`, errors);
+  assert(totalScreens === 15, `book must resolve to 15 total screens, found ${totalScreens}`, errors);
 
   const imageEntries = Object.entries(imageManifest);
   await Promise.all(
@@ -277,7 +276,7 @@ export async function runAudit() {
 
   details.push(`${chapters.length} chapter files loaded successfully.`);
   details.push(`${totalScreens} total book screens resolved, including the cover.`);
-  details.push(`4 story chapters present, each capped at exactly 3 pages.`);
+  details.push(`2 story chapters present, each fixed at exactly 3 pages.`);
   details.push(`Public build keeps only / and /read/[slug] as book-facing routes.`);
   if (skipRemoteChecks) {
     details.push("Remote source and image URL checks were skipped for CI/deploy.");
@@ -289,10 +288,10 @@ export async function runAudit() {
     title: chapter.title,
     note:
       chapter.type === "story"
-        ? `Selected as one of the four short Tenali folk retellings, each fixed at ${chapter.pages.length} pages.`
+        ? `Selected as one of the two Tenali folk retellings anchoring the book, each fixed at ${chapter.pages.length} pages.`
         : chapter.type === "frontmatter"
           ? "Added as the new warm Ugadi opening note before the first story."
-          : `Included as a single-page ${chapter.type} chapter in the expanded 21-screen book.`,
+          : `Included as a single-page ${chapter.type} chapter in the shorter 15-screen book.`,
   }));
 
   const rejectedContent = [
@@ -309,11 +308,11 @@ export async function runAudit() {
   const sourceNotes = [
     {
       title: "Tenali stories",
-      note: "All four stories are treated as concise folk retellings from the same Katha Kids collection, not as literal court history.",
+      note: "The two retained stories are treated as concise folk retellings from the same Katha Kids collection, not as literal court history.",
     },
     {
       title: "Italian of the East",
-      note: "Britannica anchors the language facts; the phrase is framed as a long-circulating nickname tied to sound rather than a hard classification.",
+      note: "Britannica anchors the language facts; Henry Morris is named directly while the phrase remains framed as a long-circulating nickname tied to sound rather than a hard classification.",
     },
     {
       title: "Vemana poem",

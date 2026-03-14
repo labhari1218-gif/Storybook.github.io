@@ -9,13 +9,12 @@ takeaway: A joke can win the day, but kindness matters more than cleverness.
 sourceLabel: "Katha Kids, “Tenali Tales: Raman and the cat”"
 sourceUrl: https://kathakids.com/folktales/tenali-raman-stories/tenali-tales-raman-and-the-cat/
 sourceQuality: folklore-adaptation
-heroImage: vijayanagara-krishnadevaraya
-heroImageAlt: Sri Krishnadevaraya associated with the Vijayanagara court
-heroImageCaption: Sri Krishnadevaraya
+heroImage: story-cat-illustration
+heroImageAlt: Cartoon-style illustration of Tenali Ramakrishna with a cat
+heroImageCaption: Tenali Ramakrishna
 heroPlacement: opening-only
-imageCredit: Chavakiran, via Telugu Wikipedia / Wikimedia Commons
-imageLicense: Public domain
-imageSourceUrl: https://commons.wikimedia.org/wiki/File:Vijayanagara.jpg
+imageCredit: Designed for this storybook
+imageLicense: Original vector illustration
 pages:
   - heading: The court wanted the cleverest cat
     body: |

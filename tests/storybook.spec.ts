@@ -6,14 +6,14 @@ test("book opens on cover and front note before story one", async ({ page }) => 
   await page.goto(`${base}/`);
 
   await expect(page.getByText("A Little Book of Telugu Wonder")).toBeVisible();
-  await expect(page.getByTestId("progress-text")).toHaveText("01 / 21");
+  await expect(page.getByTestId("progress-text")).toHaveText("01 / 15");
 
   await page.getByTestId("nav-next").click();
   await expect(page.getByText("Come in. The book begins here.")).toBeVisible();
 
   await page.getByTestId("nav-next").click();
   await expect(page.getByText("The court wanted the cleverest cat")).toBeVisible();
-  await expect(page.getByTestId("progress-text")).toHaveText("03 / 21");
+  await expect(page.getByTestId("progress-text")).toHaveText("03 / 15");
 });
 
 test("story opening has one image and later pages are text only", async ({ page }) => {
