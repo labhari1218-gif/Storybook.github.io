@@ -2,7 +2,8 @@
 
 ## Selected Content
 
-- Ugadi Greetings: Added as the new warm Ugadi opening note before the first story.
+- Baahubali Quiz: Added as the opening single-screen quiz chapter with 5 timed Baahubali questions.
+- Ugadi Greetings: Added as the warm Ugadi welcome that follows the opening quiz before the first story.
 - A Strange Cat: Selected as one of the two Tenali folk retellings anchoring the book, each fixed at 3 pages.
 - Why Telugu Is Called the Italian of the East: Included as a single-page explainer chapter in the 16-screen book.
 - Vemana: Included as a single-page poem chapter in the 16-screen book.
@@ -12,7 +13,6 @@
 - Sriharikota: Included as a single-page place chapter in the 16-screen book.
 - Telugu Tongue Twisters: Included as a single-page extras chapter in the 16-screen book.
 - Rama Outsmarts a Cheat: Selected as one of the two Tenali folk retellings anchoring the book, each fixed at 3 pages.
-- Baahubali Quiz: Added as a final single-screen quiz chapter with 5 timed Baahubali questions.
 
 ## Rejected Content
 
@@ -25,7 +25,7 @@
 - Italian of the East: Britannica anchors the language facts; Henry Morris is named directly while the phrase remains framed as a long-circulating nickname tied to sound rather than a hard classification.
 - Vemana poem: The poem page is grounded in the historical C.P. Brown edition while the public translation is newly rewritten for readability.
 - Temples and Sriharikota: Tirupati, Yadadri, and Sriharikota are internally grounded in official or institutional sources but presented publicly as elegant short reading pages.
-- Baahubali quiz: The quiz ships in clue-card mode so the gameplay works without relying on reusable film stills.
+- Baahubali quiz: The quiz now opens the book and uses locally stored Wikimedia Commons photos rather than film stills.
 
 ## Image Credits
 
@@ -74,6 +74,6 @@
 - 11 chapter files loaded successfully.
 - 16 total book screens resolved, including the cover.
 - 2 story chapters present, each fixed at exactly 3 pages.
-- 1 game chapter present as the final screen, with 5 questions and score bands.
+- 1 game chapter opens the reading flow after the cover, with 5 questions and score bands.
 - Public build keeps only / and /read/[slug] as book-facing routes.
 - Remote source and image URL checks were skipped for CI/deploy.

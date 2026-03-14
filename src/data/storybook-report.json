@@ -1,9 +1,13 @@
 {
-  "generatedAt": "2026-03-14T10:50:06.226Z",
+  "generatedAt": "2026-03-14T11:04:38.230Z",
   "selectedContent": [
     {
+      "title": "Baahubali Quiz",
+      "note": "Added as the opening single-screen quiz chapter with 5 timed Baahubali questions."
+    },
+    {
       "title": "Ugadi Greetings",
-      "note": "Added as the new warm Ugadi opening note before the first story."
+      "note": "Added as the warm Ugadi welcome that follows the opening quiz before the first story."
     },
     {
       "title": "A Strange Cat",
@@ -40,10 +44,6 @@
     {
       "title": "Rama Outsmarts a Cheat",
       "note": "Selected as one of the two Tenali folk retellings anchoring the book, each fixed at 3 pages."
-    },
-    {
-      "title": "Baahubali Quiz",
-      "note": "Added as a final single-screen quiz chapter with 5 timed Baahubali questions."
     }
   ],
   "rejectedContent": [
@@ -75,7 +75,7 @@
     },
     {
       "title": "Baahubali quiz",
-      "note": "The quiz ships in clue-card mode so the gameplay works without relying on reusable film stills."
+      "note": "The quiz now opens the book and uses locally stored Wikimedia Commons photos rather than film stills."
     }
   ],
   "imageSources": [
@@ -254,7 +254,7 @@
       "11 chapter files loaded successfully.",
       "16 total book screens resolved, including the cover.",
       "2 story chapters present, each fixed at exactly 3 pages.",
-      "1 game chapter present as the final screen, with 5 questions and score bands.",
+      "1 game chapter opens the reading flow after the cover, with 5 questions and score bands.",
       "Public build keeps only / and /read/[slug] as book-facing routes.",
       "Remote source and image URL checks were skipped for CI/deploy."
     ],

@@ -2,18 +2,23 @@ import { expect, test } from "@playwright/test";
 
 const base = "/Storybook.github.io";
 
-test("book opens on cover and front note before story one", async ({ page }) => {
+test("book opens on cover, then the quiz, then the front note before story one", async ({ page }) => {
   await page.goto(`${base}/`);
 
   await expect(page.getByText("A Little Book of Telugu Wonder")).toBeVisible();
   await expect(page.getByTestId("progress-text")).toHaveText("01 / 16");
 
   await page.getByTestId("nav-next").click();
+  await expect(page.getByTestId("quiz-start")).toBeVisible();
+  await expect(page.getByTestId("progress-text")).toHaveText("02 / 16");
+
+  await page.getByTestId("nav-next").click();
   await expect(page.getByText("Come in. The book begins here.")).toBeVisible();
+  await expect(page.getByTestId("progress-text")).toHaveText("03 / 16");
 
   await page.getByTestId("nav-next").click();
   await expect(page.getByText("The court wanted the cleverest cat")).toBeVisible();
-  await expect(page.getByTestId("progress-text")).toHaveText("03 / 16");
+  await expect(page.getByTestId("progress-text")).toHaveText("04 / 16");
 });
 
 test("story opening has one image and later pages are text only", async ({ page }) => {
@@ -39,6 +44,9 @@ test("tap and swipe still turn pages, extras still expand, and cover reset works
   }
 
   await page.touchscreen.tap(box.x + box.width - 24, box.y + box.height / 2);
+  await expect(page.getByTestId("quiz-start")).toBeVisible();
+
+  await page.getByTestId("nav-next").click();
   await expect(page.getByText("Come in. The book begins here.")).toBeVisible();
 
   await page.touchscreen.tap(box.x + box.width - 24, box.y + box.height / 2);
@@ -106,7 +114,7 @@ test("quiz renders, scores, replays, and works without images", async ({ page })
 
   await page.goto(`${base}/read/baahubali-quiz`);
 
-  await expect(page.getByTestId("progress-text")).toHaveText("16 / 16");
+  await expect(page.getByTestId("progress-text")).toHaveText("02 / 16");
   await expect(page.getByTestId("quiz-start")).toBeVisible();
 
   await page.getByTestId("quiz-start").click();

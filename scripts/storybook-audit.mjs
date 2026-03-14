@@ -29,6 +29,7 @@ const expectedStorySlugs = [
 ];
 
 const expectedChapterOrder = [
+  "baahubali-quiz",
   "welcome-note",
   "a-strange-cat",
   "italian-of-the-east",
@@ -39,7 +40,6 @@ const expectedChapterOrder = [
   "sriharikota",
   "tongue-twisters",
   "raman-outsmarts-a-cheat",
-  "baahubali-quiz",
 ];
 
 async function loadYamlDirectory(directoryPath) {
@@ -240,12 +240,13 @@ export async function runAudit() {
     errors,
   );
 
-  assert(chapters[0]?.slug === "welcome-note", "front note must be the first chapter", errors);
+  assert(chapters[0]?.slug === "baahubali-quiz", "Baahubali quiz must be the first chapter", errors);
+  assert(chapters[1]?.slug === "welcome-note", "front note must follow the opening quiz", errors);
   assert(chapters.some((chapter) => chapter.slug === "vemana-uppu-kappurambu"), "Vemana poem chapter is missing", errors);
   assert(chapters.some((chapter) => chapter.slug === "tirupati"), "Tirupati chapter is missing", errors);
   assert(chapters.some((chapter) => chapter.slug === "yadadri"), "Yadadri chapter is missing", errors);
   assert(chapters.some((chapter) => chapter.slug === "sriharikota"), "Sriharikota chapter is missing", errors);
-  assert(chapters.at(-1)?.slug === "baahubali-quiz", "Baahubali quiz must be the final chapter", errors);
+  assert(chapters.at(-1)?.slug === "raman-outsmarts-a-cheat", "Rama Outsmarts a Cheat must remain the final chapter", errors);
 
   const totalScreens = chapters.reduce((count, chapter) => count + chapter.pages.length, 1);
   assert(totalScreens === 16, `book must resolve to 16 total screens, found ${totalScreens}`, errors);
@@ -305,7 +306,7 @@ export async function runAudit() {
   details.push(`${chapters.length} chapter files loaded successfully.`);
   details.push(`${totalScreens} total book screens resolved, including the cover.`);
   details.push(`2 story chapters present, each fixed at exactly 3 pages.`);
-  details.push(`1 game chapter present as the final screen, with 5 questions and score bands.`);
+  details.push(`1 game chapter opens the reading flow after the cover, with 5 questions and score bands.`);
   details.push(`Public build keeps only / and /read/[slug] as book-facing routes.`);
   if (skipRemoteChecks) {
     details.push("Remote source and image URL checks were skipped for CI/deploy.");
@@ -319,9 +320,9 @@ export async function runAudit() {
       chapter.type === "story"
         ? `Selected as one of the two Tenali folk retellings anchoring the book, each fixed at ${chapter.pages.length} pages.`
         : chapter.type === "game"
-          ? "Added as a final single-screen quiz chapter with 5 timed Baahubali questions."
+          ? "Added as the opening single-screen quiz chapter with 5 timed Baahubali questions."
         : chapter.type === "frontmatter"
-          ? "Added as the new warm Ugadi opening note before the first story."
+          ? "Added as the warm Ugadi welcome that follows the opening quiz before the first story."
           : `Included as a single-page ${chapter.type} chapter in the 16-screen book.`,
   }));
 
@@ -355,7 +356,7 @@ export async function runAudit() {
     },
     {
       title: "Baahubali quiz",
-      note: "The quiz ships in clue-card mode so the gameplay works without relying on reusable film stills.",
+      note: "The quiz now opens the book and uses locally stored Wikimedia Commons photos rather than film stills.",
     },
   ];
 

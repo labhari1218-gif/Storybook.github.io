@@ -139,7 +139,7 @@ const coverScreenBase = {
   hook: "A small festive book for phone-sized reading and slow, easy page turns.",
   heading: "Open into Telugu wonder.",
   body:
-    "Begin with an Ugadi welcome, enjoy a quick Tenali story, move through language, poetry, temple hills, and skyward dreams, then finish with one last challenge.",
+    "Begin with a quick group quiz, move into an Ugadi welcome, enjoy a Tenali story, and then turn through language, poetry, temple hills, and skyward dreams.",
   image: imageMap["vijayanagara-krishnadevaraya"],
   imageAlt: "Sri Krishnadevaraya associated with the Vijayanagara court",
   imageCaption: "Sri Krishnadevaraya",
