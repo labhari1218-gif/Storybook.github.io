@@ -1,0 +1,107 @@
+id: baahubali-quiz
+slug: baahubali-quiz
+order: 11
+title: Baahubali Quiz
+subtitle: Five quick questions before the book closes
+type: game
+hook: One phone. One round. Five questions.
+takeaway: A final playful challenge before the book begins again.
+sourceLabel: "Wikipedia, “Baahubali (franchise)”"
+sourceUrl: https://en.wikipedia.org/wiki/Baahubali_(franchise)
+sourceQuality: reference
+pages:
+  - heading: Ready for one last challenge?
+    body: |
+      Guess the character or answer the clue before time runs out.
+
+      Play together around one phone, tap fast, and see where your score lands.
+quizTitle: Guess the character. Beat the clock.
+quizIntro: Guess the character or answer the clue before time runs out.
+scoreLabels:
+  - min: 0
+    max: 199
+    label: Warm-up watcher
+    note: You found the gate to Mahishmati. One more round and the court may remember your name.
+  - min: 200
+    max: 399
+    label: Court visitor
+    note: You know the names, the court, and the conflict well enough to stay for another challenge.
+  - min: 400
+    max: 549
+    label: Mahishmati insider
+    note: You moved through the clues like someone who has walked these halls before.
+  - min: 550
+    max: 750
+    label: Crown-worthy champion
+    note: You ruled the round with speed and certainty. The throne room would approve.
+questions:
+  - id: kattappa
+    prompt: Guess this character.
+    visualType: clue-card
+    clueTitle: The loyal warrior
+    clueText: He serves the royal family with fierce loyalty and carries a secret that shocks everyone.
+    options:
+      - Kattappa
+      - Bijjaladeva
+      - Sivudu
+      - Avanthika
+    correctIndex: 0
+    explanation: Kattappa is the loyal warrior whose actions become central to the story.
+    difficulty: easy
+    timerSeconds: 10
+  - id: mahendra
+    prompt: Guess this character.
+    visualType: clue-card
+    clueTitle: The hidden heir
+    clueText: He grows up away from the palace and later discovers his connection to Mahishmati.
+    options:
+      - Amarendra Baahubali
+      - Mahendra Baahubali
+      - Bhallaladeva
+      - Kattappa
+    correctIndex: 1
+    explanation: Mahendra Baahubali, also called Sivudu, is the hidden heir.
+    difficulty: easy
+    timerSeconds: 10
+  - id: shivagami
+    prompt: Guess this character.
+    visualType: clue-card
+    clueTitle: The queen mother
+    clueText: She is regal, decisive, and one of the strongest political forces in the story.
+    options:
+      - Devasena
+      - Shivagami
+      - Sanga
+      - Avantika
+    correctIndex: 1
+    explanation: Shivagami is the queen mother and a defining force in Mahishmati.
+    difficulty: easy
+    timerSeconds: 10
+  - id: sanga
+    prompt: Who raised Mahendra after he was rescued as a child?
+    visualType: clue-card
+    clueTitle: A child far from the throne
+    clueText: He grows up away from the palace before learning who he really is.
+    options:
+      - Kattappa
+      - Shivagami
+      - Sanga
+      - Devasena
+    correctIndex: 2
+    explanation: Sanga raises Mahendra before his royal identity becomes known.
+    difficulty: hard
+    timerSeconds: 10
+  - id: mahishmati
+    prompt: Which kingdom is at the center of the Baahubali story?
+    visualType: clue-card
+    clueTitle: The crown, the court, the conflict
+    clueText: Nearly every major struggle in the story circles around this royal seat.
+    options:
+      - Kuntala
+      - Mahishmati
+      - Vengi
+      - Kalinga
+    correctIndex: 1
+    explanation: Mahishmati is the kingdom at the center of the story.
+    difficulty: hard
+    timerSeconds: 10

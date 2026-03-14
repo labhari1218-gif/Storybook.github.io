@@ -39,6 +39,7 @@ const expectedChapterOrder = [
   "sriharikota",
   "tongue-twisters",
   "raman-outsmarts-a-cheat",
+  "baahubali-quiz",
 ];
 
 async function loadYamlDirectory(directoryPath) {
@@ -163,6 +164,16 @@ export async function runAudit() {
       errors.push(`${record.fileName}: story chapters must have exactly 3 pages`);
     }
 
+    if (record.data.type === "game") {
+      if (!record.data.questions || record.data.questions.length !== 5) {
+        errors.push(`${record.fileName}: game chapters must include exactly 5 questions`);
+      }
+
+      if (!record.data.scoreLabels?.length) {
+        errors.push(`${record.fileName}: game chapters must include scoreLabels`);
+      }
+    }
+
     if (record.data.heroImage) {
       if (!imageManifest[record.data.heroImage]) {
         errors.push(`${record.fileName}: hero image "${record.data.heroImage}" not found in image manifest`);
@@ -190,6 +201,22 @@ export async function runAudit() {
         errors.push(`${record.fileName}: page ${pageIndex + 1} imageAlt is required when page image is set`);
       }
     });
+
+    if (record.data.type === "game" && Array.isArray(record.data.questions)) {
+      record.data.questions.forEach((question, questionIndex) => {
+        if (!Array.isArray(question.options) || question.options.length !== 4) {
+          errors.push(`${record.fileName}: question ${questionIndex + 1} must have exactly 4 options`);
+        }
+
+        if (question.correctIndex < 0 || question.correctIndex > 3) {
+          errors.push(`${record.fileName}: question ${questionIndex + 1} correctIndex must be between 0 and 3`);
+        }
+
+        if (question.timerSeconds !== 10) {
+          errors.push(`${record.fileName}: question ${questionIndex + 1} timerSeconds must be 10`);
+        }
+      });
+    }
   }
 
   const slugs = chapters.map((chapter) => chapter.slug);
@@ -218,9 +245,10 @@ export async function runAudit() {
   assert(chapters.some((chapter) => chapter.slug === "tirupati"), "Tirupati chapter is missing", errors);
   assert(chapters.some((chapter) => chapter.slug === "yadadri"), "Yadadri chapter is missing", errors);
   assert(chapters.some((chapter) => chapter.slug === "sriharikota"), "Sriharikota chapter is missing", errors);
+  assert(chapters.at(-1)?.slug === "baahubali-quiz", "Baahubali quiz must be the final chapter", errors);
 
   const totalScreens = chapters.reduce((count, chapter) => count + chapter.pages.length, 1);
-  assert(totalScreens === 15, `book must resolve to 15 total screens, found ${totalScreens}`, errors);
+  assert(totalScreens === 16, `book must resolve to 16 total screens, found ${totalScreens}`, errors);
 
   const imageEntries = Object.entries(imageManifest);
   await Promise.all(
@@ -277,6 +305,7 @@ export async function runAudit() {
   details.push(`${chapters.length} chapter files loaded successfully.`);
   details.push(`${totalScreens} total book screens resolved, including the cover.`);
   details.push(`2 story chapters present, each fixed at exactly 3 pages.`);
+  details.push(`1 game chapter present as the final screen, with 5 questions and score bands.`);
   details.push(`Public build keeps only / and /read/[slug] as book-facing routes.`);
   if (skipRemoteChecks) {
     details.push("Remote source and image URL checks were skipped for CI/deploy.");
@@ -289,9 +318,11 @@ export async function runAudit() {
     note:
       chapter.type === "story"
         ? `Selected as one of the two Tenali folk retellings anchoring the book, each fixed at ${chapter.pages.length} pages.`
+        : chapter.type === "game"
+          ? "Added as a final single-screen quiz chapter with 5 timed Baahubali questions."
         : chapter.type === "frontmatter"
           ? "Added as the new warm Ugadi opening note before the first story."
-          : `Included as a single-page ${chapter.type} chapter in the shorter 15-screen book.`,
+          : `Included as a single-page ${chapter.type} chapter in the 16-screen book.`,
   }));
 
   const rejectedContent = [
@@ -322,6 +353,10 @@ export async function runAudit() {
       title: "Temples and Sriharikota",
       note: "Tirupati, Yadadri, and Sriharikota are internally grounded in official or institutional sources but presented publicly as elegant short reading pages.",
     },
+    {
+      title: "Baahubali quiz",
+      note: "The quiz ships in clue-card mode so the gameplay works without relying on reusable film stills.",
+    },
   ];
 
   const imageSources = imageEntries.map(([, image]) => ({
@@ -346,6 +381,10 @@ export async function runAudit() {
     {
       claim: "Per-page image repetition",
       action: "Changed to one strong image per chapter so later story pages can breathe as text-only paper pages.",
+    },
+    {
+      claim: "Baahubali character imagery",
+      action: "Shipped as clue cards by default so the game remains playable without depending on movie still licensing.",
     },
   ];
 

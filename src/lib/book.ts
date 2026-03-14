@@ -8,7 +8,8 @@ export type ChapterType =
   | "poem"
   | "place"
   | "extras"
-  | "frontmatter";
+  | "frontmatter"
+  | "game";
 
 export type HeroPlacement = "opening-only" | "full-chapter";
 
@@ -27,6 +28,29 @@ export type ChapterPage = {
   displayLines?: string[];
   translationLines?: string[];
   imageMeta?: ResolvedImage;
+};
+
+export type QuizQuestion = {
+  id: string;
+  prompt: string;
+  visualType: "image" | "clue-card";
+  image?: ImageId;
+  imageAlt?: string;
+  clueTitle?: string;
+  clueText?: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+  difficulty: "easy" | "hard";
+  timerSeconds: number;
+  imageMeta?: ResolvedImage;
+};
+
+export type ScoreLabel = {
+  min: number;
+  max: number;
+  label: string;
+  note: string;
 };
 
 export type ResolvedChapter = {
@@ -54,6 +78,10 @@ export type ResolvedChapter = {
     label: string;
     value: string;
   }[];
+  quizTitle?: string;
+  quizIntro?: string;
+  questions?: QuizQuestion[];
+  scoreLabels?: ScoreLabel[];
 };
 
 export type ScreenVariant =
@@ -64,7 +92,8 @@ export type ScreenVariant =
   | "info-page"
   | "poem-page"
   | "place-page"
-  | "extras-page";
+  | "extras-page"
+  | "game-page";
 
 export type BookScreen = {
   id: string;
@@ -93,6 +122,10 @@ export type BookScreen = {
   }[];
   displayLines?: string[];
   translationLines?: string[];
+  quizTitle?: string;
+  quizIntro?: string;
+  questions?: QuizQuestion[];
+  scoreLabels?: ScoreLabel[];
 };
 
 const coverScreenBase = {
@@ -106,7 +139,7 @@ const coverScreenBase = {
   hook: "A small festive book for phone-sized reading and slow, easy page turns.",
   heading: "Open into Telugu wonder.",
   body:
-    "Begin with an Ugadi welcome, wander through four quick Tenali stories, pause for a poem, visit temple hills, and end where rockets rise from the coast.",
+    "Begin with an Ugadi welcome, enjoy a quick Tenali story, move through language, poetry, temple hills, and skyward dreams, then finish with one last challenge.",
   image: imageMap["vijayanagara-krishnadevaraya"],
   imageAlt: "Sri Krishnadevaraya associated with the Vijayanagara court",
   imageCaption: "Sri Krishnadevaraya",
@@ -130,6 +163,11 @@ function resolveChapter(entry: Awaited<ReturnType<typeof getCollection<"chapters
       image: page.image as ImageId | undefined,
       imageMeta: page.image ? resolveImage(page.image) : undefined,
     })),
+    questions: data.questions?.map((question) => ({
+      ...question,
+      image: question.image as ImageId | undefined,
+      imageMeta: question.image ? resolveImage(question.image) : undefined,
+    })),
   } satisfies ResolvedChapter;
 }
 
@@ -152,6 +190,10 @@ function getVariant(chapter: ResolvedChapter, pageIndex: number): ScreenVariant 
 
   if (chapter.type === "extras") {
     return "extras-page";
+  }
+
+  if (chapter.type === "game") {
+    return "game-page";
   }
 
   return "info-page";
@@ -228,6 +270,10 @@ export async function getBookScreens() {
         extras: pageIndex === 0 ? chapter.extras : undefined,
         displayLines: page.displayLines,
         translationLines: page.translationLines,
+        quizTitle: pageIndex === 0 ? chapter.quizTitle : undefined,
+        quizIntro: pageIndex === 0 ? chapter.quizIntro : undefined,
+        questions: pageIndex === 0 ? chapter.questions : undefined,
+        scoreLabels: pageIndex === 0 ? chapter.scoreLabels : undefined,
       });
     });
   });

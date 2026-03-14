@@ -8,6 +8,7 @@ import {
   type PointerEvent,
 } from "react";
 import type { BookScreen } from "../lib/book";
+import FinalQuizGame from "./FinalQuizGame";
 
 type Props = {
   screens: BookScreen[];
@@ -118,6 +119,8 @@ function TopMeta({ screen }: { screen: BookScreen }) {
               ? "Place"
               : screen.chapterType === "extras"
                 ? "Extras"
+                : screen.chapterType === "game"
+                  ? "Game"
                 : "Story";
   const sectionLabel =
     screen.kind === "cover"
@@ -408,6 +411,10 @@ function ExtrasPageView({
   );
 }
 
+function GamePageView({ screen }: { screen: BookScreen }) {
+  return <FinalQuizGame screen={screen} />;
+}
+
 function ScreenCard({
   screen,
   expanded,
@@ -445,6 +452,7 @@ function ScreenCard({
           onToggleExtra={onToggleExtra}
         />
       ) : null}
+      {screen.variant === "game-page" ? <GamePageView screen={screen} /> : null}
     </article>
   );
 }
