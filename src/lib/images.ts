@@ -20,6 +20,13 @@ import baahubaliMountain from "../assets/images/quiz/baahubali-mountain.svg";
 import baahubaliCrown from "../assets/images/quiz/baahubali-crown.svg";
 import baahubaliBaby from "../assets/images/quiz/baahubali-baby.svg";
 import baahubaliFort from "../assets/images/quiz/baahubali-fort.svg";
+import baahubaliWithPrabhas from "../assets/reference-images/baahubali-safe/bahubali-with-prabhas.jpg";
+import prabhasBahubaliPm from "../assets/reference-images/baahubali-safe/prabhas-bahubali-pm.jpg";
+import prabhasSathyarajBahubaliSet from "../assets/reference-images/baahubali-safe/prabhas-sathyaraj-bahubali-set.jpg";
+import sathyarajBahubaliCropped from "../assets/reference-images/baahubali-safe/sathyaraj-bahubali-cropped.jpg";
+import ramyaKrishnan from "../assets/reference-images/baahubali-safe/ramya-krishnan.jpg";
+import anushkaBaahubaliTrailer from "../assets/reference-images/baahubali-safe/anushka-baahubali-trailer.jpg";
+import anushkaShettyPortrait from "../assets/reference-images/baahubali-safe/anushka-shetty-portrait.jpg";
 import imageManifest from "../data/image-manifest.json";
 
 const rawAssets = {
@@ -45,6 +52,13 @@ const rawAssets = {
   "baahubali-crown": baahubaliCrown,
   "baahubali-baby": baahubaliBaby,
   "baahubali-fort": baahubaliFort,
+  "bahubali-with-prabhas": baahubaliWithPrabhas,
+  "prabhas-bahubali-pm": prabhasBahubaliPm,
+  "prabhas-sathyaraj-bahubali-set": prabhasSathyarajBahubaliSet,
+  "sathyaraj-bahubali-cropped": sathyarajBahubaliCropped,
+  "ramya-krishnan": ramyaKrishnan,
+  "anushka-baahubali-trailer": anushkaBaahubaliTrailer,
+  "anushka-shetty-portrait": anushkaShettyPortrait,
 } as const;
 
 export type ImageId = keyof typeof rawAssets;

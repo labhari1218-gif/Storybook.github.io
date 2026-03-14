@@ -92,6 +92,18 @@ test("public reading flow contains no visible source links and fits mobile viewp
 });
 
 test("quiz renders, scores, replays, and works without images", async ({ page }) => {
+  async function answerQuestion(optionIndex: number, feedbackText?: string) {
+    await page.getByTestId(`quiz-option-${optionIndex}`).click();
+    if (feedbackText) {
+      await expect(page.getByTestId("quiz-feedback")).toHaveText(feedbackText);
+    }
+
+    const nextButton = page.getByTestId("quiz-next");
+    if (await nextButton.isVisible().catch(() => false)) {
+      await nextButton.click();
+    }
+  }
+
   await page.goto(`${base}/read/baahubali-quiz`);
 
   await expect(page.getByTestId("progress-text")).toHaveText("16 / 16");
@@ -106,25 +118,17 @@ test("quiz renders, scores, replays, and works without images", async ({ page })
   await page.waitForTimeout(1100);
   await expect(page.getByTestId("quiz-timer")).toHaveText("09s left");
 
-  await page.getByTestId("quiz-option-0").click();
-  await expect(page.getByTestId("quiz-feedback")).toHaveText("Correct");
+  await answerQuestion(0, "Correct");
   await expect(page.getByTestId("quiz-score-running")).not.toHaveText("Score 0");
-  await page.getByTestId("quiz-next").click();
 
   await expect(page.getByTestId("quiz-prompt")).toHaveText("Guess this character.");
-  await page.getByTestId("quiz-option-0").click();
-  await expect(page.getByTestId("quiz-feedback")).toHaveText("Not this one");
-  await page.getByTestId("quiz-next").click();
+  await answerQuestion(0, "Not this one");
 
-  await page.getByTestId("quiz-option-1").click();
-  await page.getByTestId("quiz-next").click();
+  await answerQuestion(1, "Correct");
 
-  await page.getByTestId("quiz-option-2").click();
-  await page.getByTestId("quiz-next").click();
+  await answerQuestion(2, "Correct");
 
-  await page.getByTestId("quiz-option-1").click();
-  await expect(page.getByTestId("quiz-feedback")).toHaveText("Correct");
-  await page.getByTestId("quiz-next").click();
+  await answerQuestion(1, "Correct");
 
   await expect(page.getByTestId("quiz-total-score")).toBeVisible();
   await expect(page.getByTestId("quiz-replay")).toBeVisible();

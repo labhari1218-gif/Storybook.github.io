@@ -168,5 +168,61 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji/color/svg/1F3F0.svg",
     "presentation": "illustration"
+  },
+  "bahubali-with-prabhas": {
+    "path": "src/assets/reference-images/baahubali-safe/bahubali-with-prabhas.jpg",
+    "title": "Bahubali with Prabhas",
+    "credit": "Vagesh S, via Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bahubali_With_Prabhas.jpg",
+    "presentation": "photo"
+  },
+  "prabhas-bahubali-pm": {
+    "path": "src/assets/reference-images/baahubali-safe/prabhas-bahubali-pm.jpg",
+    "title": "Prabhas, lead actor of Bahubali",
+    "credit": "Prime Minister's Office, via Wikimedia Commons",
+    "license": "GODL-India",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shri_Prabhas,_lead_actor,_Bahubali,_calling_on_the_Prime_Minister,_Shri_Narendra_Modi,_in_New_Delhi_on_July_26,_2015.jpg",
+    "presentation": "photo"
+  },
+  "prabhas-sathyaraj-bahubali-set": {
+    "path": "src/assets/reference-images/baahubali-safe/prabhas-sathyaraj-bahubali-set.jpg",
+    "title": "Prabhas and Sathyaraj filming Bahubali the Conclusion",
+    "credit": "Vagesh S, via Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prabhas_and_Sathyaraj_filming_Bahubali_the_Conclusion.jpg",
+    "presentation": "photo"
+  },
+  "sathyaraj-bahubali-cropped": {
+    "path": "src/assets/reference-images/baahubali-safe/sathyaraj-bahubali-cropped.jpg",
+    "title": "Sathyaraj filming Bahubali the Conclusion",
+    "credit": "Vagesh S, via Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sathyaraj_filming_Bahubali_the_Conclusion_(cropped).jpg",
+    "presentation": "photo"
+  },
+  "ramya-krishnan": {
+    "path": "src/assets/reference-images/baahubali-safe/ramya-krishnan.jpg",
+    "title": "Ramya Krishnan",
+    "credit": "Bollywood Hungama, via Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramya_Krishnan.jpg",
+    "presentation": "photo"
+  },
+  "anushka-baahubali-trailer": {
+    "path": "src/assets/reference-images/baahubali-safe/anushka-baahubali-trailer.jpg",
+    "title": "Anushka at the trailer launch of Baahubali",
+    "credit": "Bollywood Hungama, via Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anushka_at_the_trailer_launch_of_Baahubali.jpg",
+    "presentation": "photo"
+  },
+  "anushka-shetty-portrait": {
+    "path": "src/assets/reference-images/baahubali-safe/anushka-shetty-portrait.jpg",
+    "title": "Anushka Shetty",
+    "credit": "Bollywood Hungama, via Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anushka_Shetty2.jpg",
+    "presentation": "photo"
   }
 }

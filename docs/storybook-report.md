@@ -51,6 +51,13 @@
 - Crown emoji: OpenMoji via jsDelivr (CC BY-SA 4.0)
 - Baby emoji: OpenMoji via jsDelivr (CC BY-SA 4.0)
 - Castle emoji: OpenMoji via jsDelivr (CC BY-SA 4.0)
+- Bahubali with Prabhas: Vagesh S, via Wikimedia Commons (CC BY-SA 4.0)
+- Prabhas, lead actor of Bahubali: Prime Minister's Office, via Wikimedia Commons (GODL-India)
+- Prabhas and Sathyaraj filming Bahubali the Conclusion: Vagesh S, via Wikimedia Commons (CC BY-SA 4.0)
+- Sathyaraj filming Bahubali the Conclusion: Vagesh S, via Wikimedia Commons (CC BY-SA 4.0)
+- Ramya Krishnan: Bollywood Hungama, via Wikimedia Commons (CC BY 3.0)
+- Anushka at the trailer launch of Baahubali: Bollywood Hungama, via Wikimedia Commons (CC BY 3.0)
+- Anushka Shetty: Bollywood Hungama, via Wikimedia Commons (CC BY 3.0)
 
 ## Editorial Softening
 

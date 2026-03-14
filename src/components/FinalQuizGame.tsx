@@ -132,6 +132,7 @@ export default function FinalQuizGame({ screen }: Props) {
   const questionNumber = currentQuestionIndex + 1;
   const progress = phase === "intro" ? 0 : Math.max(0, Math.min(100, (remainingSeconds / currentQuestion.timerSeconds) * 100));
   const correctIndex = currentQuestion.correctIndex;
+  const visualIsPhoto = currentQuestion.imageMeta?.presentation === "photo";
 
   return (
     <div
@@ -210,14 +211,19 @@ export default function FinalQuizGame({ screen }: Props) {
               {currentQuestion.imageMeta ? (
                 <div
                   data-testid="quiz-visual"
-                  className="flex h-16 w-16 items-center justify-center rounded-[18px] border border-[rgba(154,79,43,0.18)] bg-[rgba(154,79,43,0.08)] p-2"
+                  className={[
+                    "overflow-hidden border border-[rgba(154,79,43,0.18)] bg-[rgba(154,79,43,0.08)]",
+                    visualIsPhoto
+                      ? "h-20 w-20 shrink-0 rounded-[20px] p-0"
+                      : "flex h-16 w-16 items-center justify-center rounded-[18px] p-2",
+                  ].join(" ")}
                 >
                   <img
                     src={currentQuestion.imageMeta.asset.src}
                     width={currentQuestion.imageMeta.asset.width}
                     height={currentQuestion.imageMeta.asset.height}
                     alt={currentQuestion.imageAlt ?? currentQuestion.clueTitle ?? "Quiz visual"}
-                    className="h-full w-full object-contain"
+                    className={visualIsPhoto ? "h-full w-full object-cover object-top" : "h-full w-full object-contain"}
                     draggable={false}
                   />
                 </div>
